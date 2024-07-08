@@ -4,47 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="694b4741-9309-4177-8be5-411a1ebe0548" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/common/ScreenProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/common/constants/CommonConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/common/constants/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/common/constants/DriverConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/components/Header.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/components/HeaderBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/components/MobileHeader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/pages/android/AccountPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/pages/android/CartPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/pages/android/CreateAccountPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/pages/android/LogInPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/pages/android/MultipleProductsPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/pages/android/ProductPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/pages/common/AccountPageBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/pages/common/CartPageBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/pages/common/CreateAccountPageBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/pages/common/LogInPageBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/pages/common/MultipleProductsPageBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/pages/common/ProductPageBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/util/Reader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/util/driver/AndroidDriverServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/util/driver/IOSMobileDriver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/util/driver/MobileDriverFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/util/driver/MobileDriverHolder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/util/driver/MobileDriverService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/webtest/AndroidAppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/webtest/MobileTestBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/appium.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/device.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/regression-suite.xml" afterDir="false" />
+    <list default="true" id="694b4741-9309-4177-8be5-411a1ebe0548" name="Changes" comment="first commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/common/constants/Direction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/pages/android/HomePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/pages/android/SearchResultPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/pages/common/HomePageBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/pages/common/SearchResultPageBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/util/driver/AndroidDrivers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/webtest/BaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/webtest/HomePageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/placeholderPackageName/common/ScreenProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/placeholderPackageName/common/constants/CommonConstants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/placeholderPackageName/common/constants/Constants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/placeholderPackageName/common/constants/DriverConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/common/constants/DriverConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/components/Header.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/components/Header.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/components/HeaderBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/components/HeaderBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/components/MobileHeader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/pages/android/AccountPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/pages/android/CartPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/pages/android/CreateAccountPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/pages/android/LogInPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/pages/android/MultipleProductsPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/pages/android/ProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/pages/android/ProductPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/pages/common/AccountPageBase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/pages/common/CartPageBase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/pages/common/CreateAccountPageBase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/pages/common/LogInPageBase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/pages/common/MultipleProductsPageBase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/pages/common/ProductPageBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/pages/common/ProductPageBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/placeholderPackageName/util/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/util/PropertiesReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/placeholderPackageName/util/driver/AndroidDriverServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/placeholderPackageName/util/driver/IOSMobileDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/util/driver/IOSDrivers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/placeholderPackageName/util/driver/MobileDriverFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/placeholderPackageName/util/driver/MobileDriverHolder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/placeholderPackageName/util/driver/MobileDriverService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/util/driver/MobileDriverService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/webtest/AndroidAppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/webtest/MobileTestBase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/appium.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/appium.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/device.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/device.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/regression-suite.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/regression-suite.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +55,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package-info" />
+        <option value="AnnotationType" />
         <option value="Class" />
+        <option value="Interface" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -68,9 +71,9 @@
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2imHikQUO9ftloInNUyZp38dS7y" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -83,16 +86,28 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.AndroidSampleTest.testUserLogsIn.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "TestNG.AndroidAppTest.executor": "Run",
+    "TestNG.AndroidSampleTest.testUserLogsIn.executor": "Run",
+    "TestNG.HomePageTest.testProductSearch.executor": "Run",
+    "TestNG.HomePageTest.testUserLogsIn.executor": "Debug",
+    "TestNG.MobileTestBase.sampleTest.executor": "Run",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/budaa/Desktop/Appium-Automation-Project/src/main/java/placeholderPackageName",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+    "last_opened_file_path": "C:/Users/budaa/Desktop/Solvd_Carina_Project-master",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "advanced.settings"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="webtest" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\budaa\Desktop\Appium-Automation-Project\src\main\java\placeholderPackageName" />
       <recent name="C:\Users\budaa\Desktop\Appium-Automation-Project\src\test\resources" />
@@ -103,7 +118,23 @@
       <recent name="placeholderPackageName.common.constant" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="TestNG.HomePageTest.testProductSearch">
+    <configuration name="HomePageTest.testProductSearch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mobile-appium-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="webtest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="webtest" />
+      <option name="MAIN_CLASS_NAME" value="webtest.HomePageTest" />
+      <option name="METHOD_NAME" value="testProductSearch" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AndroidAppTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Appium-Automation-Project" />
       <extension name="coverage">
@@ -121,11 +152,58 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HomePageTest.testProductSearch" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="mobile-appium-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="webtest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="webtest" />
+      <option name="MAIN_CLASS_NAME" value="webtest.HomePageTest" />
+      <option name="METHOD_NAME" value="testProductSearch" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MobileTestBase.sampleTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="mobile-appium-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="placeholderPackageName.util.driver.AndroidDrivers" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="placeholderPackageName.util.driver" />
+      <option name="MAIN_CLASS_NAME" value="placeholderPackageName.util.driver.MobileTestBase" />
+      <option name="METHOD_NAME" value="sampleTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.HomePageTest.testProductSearch" />
+        <item itemvalue="JUnit.HomePageTest.testProductSearch" />
+        <item itemvalue="TestNG.MobileTestBase.sampleTest" />
         <item itemvalue="TestNG.AndroidAppTest" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
+        <option value="jdk-22-openjdk-22-3183f394aec4-bad0321e" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -136,6 +214,46 @@
       <option name="presentableId" value="Default" />
       <updated>1720088962525</updated>
     </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <option name="closed" value="true" />
+      <created>1720105212583</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1720105212583</updated>
+    </task>
+    <task id="LOCAL-00002" summary="first commit">
+      <option name="closed" value="true" />
+      <created>1720105275153</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1720105275153</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="TestNG">
+        <watch expression="((RemoteWebElement)searchResultPage.searchResultsList.get(0)).id" custom="org.openqa.selenium.remote.RemoteWebElement" />
+        <watch expression="((RemoteWebElement)searchResultPage.searchResultsList.get(0)).id" custom="org.openqa.selenium.remote.RemoteWebElement" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

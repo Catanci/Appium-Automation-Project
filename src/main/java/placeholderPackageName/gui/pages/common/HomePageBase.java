@@ -1,25 +1,21 @@
-package placeholderPackageName.gui.components;
+package placeholderPackageName.gui.pages.common;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.support.PageFactory;
 
-public abstract class HeaderBase {
+public abstract class HomePageBase {
 
     protected AndroidDriver driver;
 
-    public HeaderBase(AndroidDriver driver) {
+    public HomePageBase(AndroidDriver driver) {
         this.driver = driver;
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    public abstract void tapSignIn();
+    public abstract void tapHomeButton();
 
-    public abstract void tapGiftCards();
+    public abstract void search(String search);
 
-    public abstract void tapMyEbay();
-
-    public abstract void tapCart();
-
-
+    public abstract void open();
 }

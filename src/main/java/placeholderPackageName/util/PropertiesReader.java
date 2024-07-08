@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-public class Reader {
+public class PropertiesReader {
     public static String getAppiumConfig(String propertyName) {
         return getPropertyValue("appium.properties", propertyName);
     }
@@ -13,17 +13,16 @@ public class Reader {
         return getPropertyValue("device.properties", propertyName);
     }
 
-    private static String getPropertyValue(String filename, String propertyName) {
+    public static String getPropertyValue(String filename, String propertyName) {
         String propertyValue = null;
 
-        try (InputStream inputStream = Reader.class.getClassLoader().getResourceAsStream(filename)) {
+        try (InputStream inputStream = PropertiesReader.class.getClassLoader().getResourceAsStream(filename)) {
             Properties properties = new Properties();
             properties.load(inputStream);
             propertyValue = properties.getProperty(propertyName);
         } catch (IOException ex) {
             ex.printStackTrace();
         }
-
         return propertyValue;
     }
 }

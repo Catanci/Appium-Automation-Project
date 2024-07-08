@@ -1,11 +1,9 @@
 package placeholderPackageName.util.driver;
 
-import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
 
 public interface MobileDriverService {
     void startUpDriver();
-
     void tearDownDriver();
-
-    AppiumDriver getDriver();
+    AndroidDriver getDriver();
 }
