@@ -20,6 +20,4 @@ public abstract class HeaderBase {
     public abstract void tapMyEbay();
 
     public abstract void tapCart();
-
-
 }

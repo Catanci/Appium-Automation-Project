@@ -26,6 +26,8 @@ public class SearchResultPage {
     @AndroidFindBy(xpath = "//android.view.View[@resource-id=\"mainContent\"]/android.view.View[1]/android.view.View/android.widget.TextView[@text]")
     private WebElement searchResultCount;
 
+
+
     private final Logger logger = LogManager.getLogger(SearchResultPage.class);
     private final WebDriverWait wait;
 
@@ -48,6 +50,15 @@ public class SearchResultPage {
      WebElement targetElement = firstResult.stream()
              .findFirst()
              .orElseThrow(() -> new RuntimeException("First result isn't found"));
+        targetElement.click();
+    }
+
+    public void tapResultByIndex(int index) {
+        List<WebElement> searchResult = getSearchResultsList();
+        if (index < 0 || index >= searchResult.size()) {
+            throw new IllegalArgumentException("Invalid index. Must be between 0 and " + (searchResult.size() - 1));
+        }
+        WebElement targetElement = searchResult.get(index);
         targetElement.click();
     }
 

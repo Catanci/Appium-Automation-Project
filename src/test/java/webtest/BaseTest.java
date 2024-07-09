@@ -88,4 +88,20 @@ public class BaseTest {
 
         driver.perform(Arrays.asList(swipe));
     }
+
+    public void pause(Number timeout) {
+        logger.debug("Will wait for {} seconds", timeout);
+
+        try {
+            Float timeoutFloat = timeout.floatValue() * 1000.0F;
+            long timeoutLong = timeoutFloat.longValue();
+            Thread.sleep(timeoutLong);
+        } catch (InterruptedException var4) {
+            Thread.currentThread().interrupt();
+        }
+
+        logger.debug("Pause is over. Keep going..");
+    }
+
+
 }
