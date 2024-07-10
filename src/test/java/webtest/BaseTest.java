@@ -16,6 +16,7 @@ import org.openqa.selenium.Dimension;
 
 import java.time.Duration;
 import java.util.Arrays;
+import java.util.List;
 
 public class BaseTest {
     protected MobileDriverService driverService;
@@ -47,7 +48,6 @@ public class BaseTest {
         Dimension size = driver.manage().window().getSize();
 
         int startX, startY, endX, endY;
-
         switch (direction) {
             case UP:
                 startX = size.width / 2;
@@ -79,14 +79,14 @@ public class BaseTest {
 
         PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
         Sequence swipe = new Sequence(finger, 1);
-        swipe.addAction(finger.createPointerMove(Duration.ofSeconds(0),
-                PointerInput.Origin.viewport(), startX, startY));
+        swipe.addAction(finger.createPointerMove(Duration.ofMillis(0), PointerInput.Origin.viewport(), startX, startY));
         swipe.addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
-        swipe.addAction(finger.createPointerMove(Duration.ofMillis(700),
-                PointerInput.Origin.viewport(), endX, endY));
+        swipe.addAction(finger.createPointerMove(Duration.ofMillis(700), PointerInput.Origin.viewport(), endX, endY));
         swipe.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+        logger.debug("Executing swipe action");
+        driver.perform(List.of(swipe));
+//        driver.perform(Arrays.asList(swipe));
 
-        driver.perform(Arrays.asList(swipe));
     }
 
     public void pause(Number timeout) {

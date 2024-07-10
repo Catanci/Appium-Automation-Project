@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="694b4741-9309-4177-8be5-411a1ebe0548" name="Changes" comment="project update">
-      <change afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/pages/android/FiltersPage.java" afterDir="false" />
+    <list default="true" id="694b4741-9309-4177-8be5-411a1ebe0548" name="Changes" comment="implementing tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/components/HeaderBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/components/HeaderBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/pages/android/FiltersPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/pages/android/FiltersPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/pages/android/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/pages/android/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/pages/android/ProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/pages/android/ProductPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/pages/android/SearchResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/pages/android/SearchResultPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/pages/common/ProductPageBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/placeholderPackageName/gui/pages/common/ProductPageBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/webtest/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/webtest/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/webtest/HomePageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/webtest/HomePageTest.java" afterDir="false" />
     </list>
@@ -62,6 +60,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "TestNG.AndroidAppTest.executor": "Run",
     "TestNG.AndroidSampleTest.testUserLogsIn.executor": "Run",
+    "TestNG.HomePageTest.testApplyingFiltersToSearchResult.executor": "Run",
     "TestNG.HomePageTest.testCarousel.executor": "Run",
     "TestNG.HomePageTest.testProductSearch.executor": "Debug",
     "TestNG.HomePageTest.testUserLogsIn.executor": "Debug",
@@ -89,7 +88,7 @@
       <recent name="placeholderPackageName.common.constant" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.HomePageTest.testCarousel">
+  <component name="RunManager" selected="TestNG.HomePageTest.testApplyingFiltersToSearchResult">
     <configuration name="HomePageTest.testProductSearch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mobile-appium-java" />
       <extension name="coverage">
@@ -106,8 +105,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AndroidAppTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Appium-Automation-Project" />
+    <configuration name="HomePageTest.testApplyingFiltersToSearchResult" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="mobile-appium-java" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="webtest.*" />
@@ -115,8 +114,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="webtest" />
-      <option name="MAIN_CLASS_NAME" value="webtest.AndroidAppTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="MAIN_CLASS_NAME" value="webtest.HomePageTest" />
+      <option name="METHOD_NAME" value="testApplyingFiltersToSearchResult" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -179,11 +179,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.HomePageTest.testApplyingFiltersToSearchResult" />
         <item itemvalue="TestNG.HomePageTest.testCarousel" />
         <item itemvalue="TestNG.HomePageTest.testProductSearch" />
         <item itemvalue="JUnit.HomePageTest.testProductSearch" />
         <item itemvalue="TestNG.MobileTestBase.sampleTest" />
-        <item itemvalue="TestNG.AndroidAppTest" />
       </list>
     </recent_temporary>
   </component>
@@ -228,7 +228,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720446439384</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="implementing tests">
+      <option name="closed" value="true" />
+      <created>1720537072224</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1720537072224</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -245,6 +253,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
     <MESSAGE value="project update" />
-    <option name="LAST_COMMIT_MESSAGE" value="project update" />
+    <MESSAGE value="implementing tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="implementing tests" />
   </component>
 </project>

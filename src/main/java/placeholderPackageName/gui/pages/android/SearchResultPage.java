@@ -26,7 +26,11 @@ public class SearchResultPage {
     @AndroidFindBy(xpath = "//android.view.View[@resource-id=\"mainContent\"]/android.view.View[1]/android.view.View/android.widget.TextView[@text]")
     private WebElement searchResultCount;
 
+    @AndroidFindBy(xpath = "//android.view.View[@resource-id='mainContent']/android.view.View[1]/android.view.View")
+    private WebElement bottomResultsCount;
 
+    @AndroidFindBy(xpath = "//android.widget.Button[@text='Filter']")
+    private WebElement filter;
 
     private final Logger logger = LogManager.getLogger(SearchResultPage.class);
     private final WebDriverWait wait;
@@ -40,7 +44,7 @@ public class SearchResultPage {
     public List<String> getVisibleResults() {
         logger.info("Number of elements found: " + searchResultsList.size());
         return searchResultsList.stream()
-                .peek(element -> logger.info("Element text: " + element.getText()))
+                .peek(element -> logger.info("Found elements... " + element.getSize()))
                 .map(WebElement::getText)
                 .collect(Collectors.toList());
     }
@@ -64,12 +68,27 @@ public class SearchResultPage {
 
     public boolean isPageOpened() {
         try {
-            Thread.sleep(500);
+            Thread.sleep(1000);
             wait.until(ExpectedConditions.visibilityOf(searchResultCount));
             return searchResultCount.isDisplayed();
         } catch (Exception e) {
             logger.error("Page is not opened: ", e);
             return false;
         }
+    }
+
+    public boolean isBottomResultCountVisible() {
+        try {
+            Thread.sleep(1000);
+            wait.until(ExpectedConditions.visibilityOf(bottomResultsCount));
+            return bottomResultsCount.isDisplayed();
+        } catch (Exception e) {
+            logger.error("Page is not opened: ", e);
+            return false;
+        }
+    }
+
+    public void tapFilters() {
+        filter.click();
     }
 }
