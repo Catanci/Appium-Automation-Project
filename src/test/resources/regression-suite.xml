@@ -2,7 +2,7 @@
 <suite name="Regression Test Suite">
     <test name="Regression Test">
         <classes>
-            <class name="webtest.HomePageTest">
+            <class name="androidtest.WebHomePageTest">
                 <methods>
                     <include name="placeholder"/>
                 </methods>
