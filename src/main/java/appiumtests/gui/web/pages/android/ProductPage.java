@@ -1,5 +1,6 @@
 package appiumtests.gui.web.pages.android;
 
+import appiumtests.gui.web.pages.common.ProductPageBase;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -14,7 +15,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 @Getter
-public class ProductPage {
+public class ProductPage extends ProductPageBase {
 
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='Back to search results']")
     private WebElement backToResultsText;
@@ -51,7 +52,7 @@ public class ProductPage {
     private final WebDriverWait wait;
 
     public ProductPage(AndroidDriver driver) {
-        super();
+        super(driver);
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }

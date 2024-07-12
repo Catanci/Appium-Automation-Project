@@ -13,5 +13,27 @@ public abstract class ProductPageBase {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-        public abstract boolean isPageOpened();
+    public abstract boolean isPageOpened();
+
+    public abstract boolean isBuyItNowButtonVisible();
+
+    public abstract String getProductPrice();
+
+    public abstract String getProductName();
+
+    public abstract String getProductCondition();
+
+    public abstract String getCartOverlayProductPrice();
+
+    public abstract String getCartOverlayProductName();
+
+    public abstract void tapBackButton();
+
+    public abstract void tapHomeButton();
+
+    public abstract void tapAddToCart();
+
+    public abstract void tapCloseButton();
+
+
 }

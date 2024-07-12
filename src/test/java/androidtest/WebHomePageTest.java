@@ -1,5 +1,6 @@
 package androidtest;
 
+import appiumtests.gui.web.components.Header;
 import appiumtests.gui.web.pages.android.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -8,7 +9,7 @@ import appiumtests.constants.Direction;
 
 import java.util.List;
 
-public class WebHomePageTest extends BaseTest {
+public class WebHomePageTest extends WebBaseTest {
 
     @Test(description = "Check if user can search for a product")
     public void testProductSearch() {
@@ -191,8 +192,12 @@ public class WebHomePageTest extends BaseTest {
         softAssert.assertTrue(homePage.isLogoVisible(),
                 "User has been redirected to different page");
 
-        homePage.tapCartIcon();
+        Header header = new Header(driver);
+        header.tapCart();
+
         CartPage cartPage = new CartPage(driver);
+        softAssert.assertTrue(cartPage.isLogoVisible(),
+                "User has been redirected to different page");
         String cartProductName = cartPage.getCartProductName();
         swipeScreen(Direction.LEFT);
         String cartProductPrice = cartPage.getCartProductPrice();

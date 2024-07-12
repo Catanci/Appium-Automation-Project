@@ -1,5 +1,6 @@
 package appiumtests.util.driver;
 
+import appiumtests.constants.TestType;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import lombok.Getter;
@@ -15,19 +16,24 @@ public class AndroidDrivers implements MobileDriverService {
     private AndroidDriver androidDriver;
 
     @Override
-    public void startUpDriver() {
+    public void startUpDriver(TestType testType) {
         UiAutomator2Options options = new UiAutomator2Options();
 
         options.setDeviceName(ANDROID_DEVICE_NAME);
         options.setPlatformName(ANDROID_PLATFORM_NAME);
         options.setPlatformVersion(ANDROID_PLATFORM_VERSION);
         options.setAutomationName(ANDROID_AUTOMATION_NAME);
-        options.setAppPackage(ANDROID_APP_PACKAGE);
-        options.setAppActivity(ANDROID_APP_ACTIVITY);
         options.setNoReset(true);
         options.setAutoGrantPermissions(true);
         options.setCapability("autoAcceptAlerts", true);
-        options.setApp(ANDROID_APP);
+
+        if (testType == TestType.WEB) {
+            options.setAppPackage(ANDROID_APP_PACKAGE);
+            options.setAppActivity(ANDROID_APP_ACTIVITY);
+        } else if (testType == TestType.APK) {
+            options.setAppPackage(ANDROID_APP_APK_PACKAGE);
+            options.setAppActivity(ANDROID_APP_APK_ACTIVITY);
+        }
 
         try {
             androidDriver = new AndroidDriver(new URL(APPIUM_URL), options);

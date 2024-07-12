@@ -17,5 +17,20 @@ public abstract class HomePageBase {
 
     public abstract void search(String search);
 
-    public abstract void open();
+    public abstract void open() throws InterruptedException;
+
+    public abstract boolean isBannerVisible();
+
+    public abstract boolean isLogoVisible();
+
+    public abstract boolean isCartEmpty();
+
+    public abstract void tapSearchButton();
+
+    public abstract void swipeCarouselRight();
+
+    public abstract void swipeCarouselLeft();
+
+
+
 }

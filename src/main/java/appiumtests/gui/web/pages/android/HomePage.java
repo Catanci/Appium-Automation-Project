@@ -43,9 +43,8 @@ public class HomePage extends HomePageBase {
     @AndroidFindBy(xpath = "//android.widget.ListView[@resource-id='s0-1-0-50-1-2-4-17[0[0]]-0[0]-7-@match-media-0-@ebay-carousel-list']//android.widget.TextView[@text][1]")
     private List<WebElement> carouselItemName;
 
-    @AndroidFindBy(xpath = "//android.view.View[@resource-id='gh-minicart-hover']")
-    private WebElement cartIcon;
-
+    @AndroidFindBy(xpath = "//android.view.View[@content-desc='Your shopping cart']")
+    private WebElement emptyCart;
 
     private final WebDriverWait wait;
 
@@ -85,16 +84,12 @@ public class HomePage extends HomePageBase {
 
     public boolean isCartEmpty() {
         try {
-            wait.until(ExpectedConditions.visibilityOf(recentlyViewedItemsBanner));
-            return recentlyViewedItemsBanner.isDisplayed();
+            wait.until(ExpectedConditions.visibilityOf(emptyCart));
+            return emptyCart.isDisplayed();
         } catch (Exception e) {
             logger.error("Cart is not empty but should be ", e);
             return false;
         }
-    }
-
-    public void tapCartIcon() {
-        cartIcon.click();
     }
 
     public boolean isLogoVisible() {
@@ -107,13 +102,17 @@ public class HomePage extends HomePageBase {
             return false;
         }
     }
-
     @Override
-    public void open()
-    {
+    public void open()  {
         logger.info("Opening the landing Page");
         driver.get(WEB_URL);
-        logger.info("Landing Page has opened");
+        try {
+            Thread.sleep(2000);
+            wait.until(ExpectedConditions.visibilityOf(emptyCart));
+            logger.info("Landing Page has opened successfully");
+        } catch (Exception e) {
+            logger.error("Failed to open the landing page: ", e);
+        }
     }
 
     @Override

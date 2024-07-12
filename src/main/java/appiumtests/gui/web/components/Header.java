@@ -11,20 +11,23 @@ import org.openqa.selenium.support.PageFactory;
 public class Header extends HeaderBase {
     protected AndroidDriver driver;
 
-    @AndroidFindBy(xpath = "//android.view.View[@resource-id=\"mw-hdr\"]/android.view.View[2]")
-    private org.openqa.selenium.bidi.network.Header header;
+    @AndroidFindBy(xpath = "//android.view.View[@resource-id='mw-hdr']/android.view.View[2]")
+    private Header header;
 
-    @AndroidFindBy(xpath = "//android.widget.Button[@text=\"Open Menu\"]")
+    @AndroidFindBy(xpath = "//android.widget.Button[@text='Open Menu']")
     private WebElement myEbayMenu;
 
-    @AndroidFindBy(xpath = "//android.view.View[@content-desc=\"Your shopping cart is empty\"]")
+    @AndroidFindBy(xpath = "//android.view.View[@content-desc='Your shopping cart is empty']")
     private WebElement emptyShoppingCart;
 
-    @AndroidFindBy(xpath = "//android.widget.TextView[@text=\"My eBay\"]")
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='My eBay']")
     private WebElement myEbay;
 
-    @AndroidFindBy(xpath = "//android.widget.TextView[@text=\"Gift Cards\"]")
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Gift Cards']")
     private WebElement giftCards;
+
+    @AndroidFindBy(xpath = "//android.view.View[@resource-id='gh-minicart-hover']")
+    private WebElement cartIcon;
 
     public Header(AndroidDriver driver) {
         super(driver);
@@ -48,11 +51,10 @@ public class Header extends HeaderBase {
 
     @Override
     public void tapCart() {
-
+    cartIcon.click();
     }
 
     public void openMenu(){
         myEbayMenu.click();
     }
-
 }

@@ -1,5 +1,6 @@
 package appiumtests.gui.web.pages.android;
 
+import appiumtests.gui.web.pages.common.FiltersPageBase;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -14,7 +15,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 @Getter
-public class FiltersPage {
+public class FiltersPage extends FiltersPageBase {
 
     @AndroidFindBy(xpath = "//android.widget.Button[@text='Buy It Now']")
     private WebElement buyItNowFilter;
@@ -36,7 +37,7 @@ public class FiltersPage {
     private final WebDriverWait wait;
 
     public FiltersPage(AndroidDriver driver) {
-        super();
+        super(driver);
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }

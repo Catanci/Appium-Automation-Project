@@ -1,31 +1,30 @@
 package androidtest;
 
+import appiumtests.constants.Direction;
+import appiumtests.constants.TestType;
+import appiumtests.util.driver.AndroidDrivers;
+import appiumtests.util.driver.MobileDriverService;
 import io.appium.java_client.android.AndroidDriver;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import appiumtests.constants.Direction;
-import appiumtests.util.driver.AndroidDrivers;
-import appiumtests.util.driver.MobileDriverService;
-
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.interactions.PointerInput;
 import org.openqa.selenium.interactions.Sequence;
-
-import org.openqa.selenium.Dimension;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 import java.time.Duration;
 import java.util.List;
 
-public class BaseTest {
+public class ApkBaseTest {
     protected MobileDriverService driverService;
     protected AndroidDriver driver;
-    private final Logger logger = LogManager.getLogger(BaseTest.class);
+    private final Logger logger = LogManager.getLogger(ApkBaseTest.class);
 
     @BeforeMethod
     public void setUp() {
         driverService = new AndroidDrivers();
-        driverService.startUpDriver();
+        driverService.startUpDriver(TestType.APK);
         driver = driverService.getDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         logger.info("Driver started successfully");
@@ -84,7 +83,6 @@ public class BaseTest {
         swipe.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
         logger.debug("Executing swipe action");
         driver.perform(List.of(swipe));
-//        driver.perform(Arrays.asList(swipe));
 
     }
 
@@ -101,6 +99,4 @@ public class BaseTest {
 
         logger.debug("Pause is over. Keep going..");
     }
-
-
 }

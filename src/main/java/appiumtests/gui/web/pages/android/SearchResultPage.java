@@ -1,4 +1,5 @@
 package appiumtests.gui.web.pages.android;
+import appiumtests.gui.web.pages.common.SearchResultPageBase;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -17,7 +18,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Getter
-public class SearchResultPage {
+public class SearchResultPage extends SearchResultPageBase {
 
     @AndroidFindBy(xpath = "//android.view.View[@content-desc]/android.view.View[1]")
     private List<WebElement> searchResultsList;
@@ -35,7 +36,7 @@ public class SearchResultPage {
     private final WebDriverWait wait;
 
     public SearchResultPage(AndroidDriver driver) {
-        super();
+        super(driver);
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }

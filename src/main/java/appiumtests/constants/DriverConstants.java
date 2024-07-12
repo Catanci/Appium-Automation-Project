@@ -17,7 +17,9 @@ public class DriverConstants {
     public static final String ANDROID_APP_ACTIVITY = getDeviceConfig("android_app_activity");
     public static final String ANDROID_NO_RESET = getDeviceConfig("android_no_reset");
     public static final String ANDROID_FULL_RESET = getDeviceConfig("android_full_reset");
-    public static final String ANDROID_APP = getDeviceConfig("android_app_path");
+    public static final String ANDROID_APP_APK_PACKAGE = getDeviceConfig("android_app_apk_package");
+    public static final String ANDROID_APP_APK_ACTIVITY = getDeviceConfig("android_app_apk_activity");
+
 
     public static final String IOS = "ios";
     public static final String IOS_DEVICE_NAME = getDeviceConfig("ios_device_name");
