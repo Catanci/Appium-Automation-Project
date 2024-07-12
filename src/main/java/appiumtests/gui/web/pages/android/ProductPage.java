@@ -48,7 +48,7 @@ public class ProductPage extends ProductPageBase {
     @AndroidFindBy(xpath = "//android.widget.Button[@text='Close the show me how overlay']")
     private WebElement closeButton;
 
-    private final Logger logger = LogManager.getLogger(SearchResultPage.class);
+    private final Logger logger = LogManager.getLogger(ProductPage.class);
     private final WebDriverWait wait;
 
     public ProductPage(AndroidDriver driver) {

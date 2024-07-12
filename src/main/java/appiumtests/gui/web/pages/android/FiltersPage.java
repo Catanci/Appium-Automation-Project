@@ -32,7 +32,7 @@ public class FiltersPage extends FiltersPageBase {
     @AndroidFindBy(xpath = "//android.widget.TextView[@resource-id='filter__title filter__title--hub']")
     private WebElement title;
 
-    private final Logger logger = LogManager.getLogger(SearchResultPage.class);
+    private final Logger logger = LogManager.getLogger(FiltersPage.class);
 
     private final WebDriverWait wait;
 

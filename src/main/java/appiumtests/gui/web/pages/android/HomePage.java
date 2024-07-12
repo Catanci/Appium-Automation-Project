@@ -48,7 +48,7 @@ public class HomePage extends HomePageBase {
 
     private final WebDriverWait wait;
 
-    private final Logger logger = LogManager.getLogger(SearchResultPage.class);
+    private final Logger logger = LogManager.getLogger(HomePage.class);
 
     String WEB_URL = "https://www.ebay.com";
 

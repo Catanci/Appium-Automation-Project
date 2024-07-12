@@ -33,7 +33,7 @@ public class CartPage extends CartPageBase {
     private WebElement shoppingCartTitle;
 
 
-    private final Logger logger = LogManager.getLogger(SearchResultPage.class);
+    private final Logger logger = LogManager.getLogger(CartPage.class);
 
     private final WebDriverWait wait;
 

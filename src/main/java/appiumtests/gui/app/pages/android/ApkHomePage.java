@@ -9,6 +9,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -20,11 +21,17 @@ public class ApkHomePage extends ApkHomePageBase {
     @AndroidFindBy(xpath = "//android.widget.EditText[@resource-id='gh-ac']")
     private WebElement searchBar;
 
-    @AndroidFindBy(xpath = "//android.widget.ListView[@resource-id='s0-1-0-50-1-2-4-17[0[0]]-0[0]-7-@match-media-0-@ebay-carousel-list']//android.widget.TextView[@text][1]")
-    private List<WebElement> carouselItemName;
-
     @AndroidFindBy(xpath = "//android.view.View[@content-desc='Your shopping cart']")
     private WebElement emptyCart;
+
+    @AndroidFindBy(xpath = "//android.widget.TextView[@content-desc='store item text']")
+    private List<WebElement> firstRowProductsList;
+
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Products']")
+    private WebElement homePageTitle;
+
+    @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc='open menu']/android.widget.ImageView")
+    private WebElement burgerMenu;
 
     private final WebDriverWait wait;
 
@@ -36,4 +43,31 @@ public class ApkHomePage extends ApkHomePageBase {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
+
+    public void tapResultByIndex(int index) {
+        List<WebElement> productsList = getFirstRowProductsList();
+        if (index < 0 || index >= productsList.size()) {
+            throw new IllegalArgumentException("Invalid index. Must be between 0 and " + (productsList.size() - 1));
+        }
+        WebElement targetElement = productsList.get(index);
+        targetElement.click();
+    }
+
+    public boolean isTitleVisible() {
+        try {
+            Thread.sleep(1000);
+            wait.until(ExpectedConditions.visibilityOf(homePageTitle));
+            return homePageTitle.isDisplayed();
+        } catch (Exception e) {
+            logger.error("Title is not visible on Home Page ", e);
+            return false;
+        }
+    }
+
+    public void tapMenu() {
+        burgerMenu.click();
+    }
+
+
 }
+
