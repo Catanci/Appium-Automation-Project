@@ -1,4 +1,4 @@
-package androidtest;
+package mobiletest;
 
 import appiumtests.constants.Direction;
 import appiumtests.gui.app.pages.android.*;

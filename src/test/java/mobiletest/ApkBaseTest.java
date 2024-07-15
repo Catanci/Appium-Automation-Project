@@ -1,33 +1,34 @@
-package androidtest;
+package mobiletest;
 
+import appiumtests.constants.Direction;
 import appiumtests.constants.TestType;
+import appiumtests.util.driver.AndroidDrivers;
+import appiumtests.util.driver.MobileDriverFactory;
+import appiumtests.util.driver.MobileDriverService;
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.android.AndroidDriver;
+import org.apache.commons.lang3.RandomStringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import appiumtests.constants.Direction;
-import appiumtests.util.driver.AndroidDrivers;
-import appiumtests.util.driver.MobileDriverService;
-
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.interactions.PointerInput;
 import org.openqa.selenium.interactions.Sequence;
-
-import org.openqa.selenium.Dimension;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.Random;
 
-public class WebBaseTest {
-    protected MobileDriverService driverService;
-    protected AndroidDriver driver;
-    private final Logger logger = LogManager.getLogger(WebBaseTest.class);
+public class ApkBaseTest {
+    protected MobileDriverService driverService = new MobileDriverFactory().getDriverService();
+    protected AppiumDriver driver;
+    private final Logger logger = LogManager.getLogger(ApkBaseTest.class);
 
     @BeforeMethod
     public void setUp() {
         driverService = new AndroidDrivers();
-        driverService.startUpDriver(TestType.WEB);
+        driverService.startUpDriver(TestType.APK);
         driver = driverService.getDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         logger.info("Driver started successfully");
@@ -86,7 +87,6 @@ public class WebBaseTest {
         swipe.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
         logger.debug("Executing swipe action");
         driver.perform(List.of(swipe));
-//        driver.perform(Arrays.asList(swipe));
 
     }
 
@@ -104,5 +104,17 @@ public class WebBaseTest {
         logger.debug("Pause is over. Keep going..");
     }
 
+    public static String createRandomAddress() {
+        int streetNumber = new Random().nextInt(8999) + 1000; // 1000 to 9999
+        String streetName = StringUtils.capitalize(RandomStringUtils.randomAlphabetic(10).toLowerCase());
+        return String.format("%d %s St", streetNumber, streetName);
+    }
 
+    public static String createRandomCardNumber() {
+        return String.format("%s-%s-%s-%s",
+                RandomStringUtils.randomNumeric(4),
+                RandomStringUtils.randomNumeric(4),
+                RandomStringUtils.randomNumeric(4),
+                RandomStringUtils.randomNumeric(4));
+    }
 }

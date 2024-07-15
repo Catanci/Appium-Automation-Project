@@ -1,6 +1,7 @@
 package appiumtests.gui.app.pages.android;
 
 import appiumtests.gui.app.pages.common.ApkCheckoutPageBase;
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -65,7 +66,7 @@ public class ApkCheckoutPage extends ApkCheckoutPageBase {
 
     private final Logger logger = LogManager.getLogger(ApkCheckoutPage.class);
 
-    public ApkCheckoutPage(AndroidDriver driver) {
+    public ApkCheckoutPage(AppiumDriver driver) {
         super(driver);
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);

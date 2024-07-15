@@ -2,6 +2,7 @@ package appiumtests.util.driver;
 
 import appiumtests.constants.TestType;
 import appiumtests.gui.web.pages.android.SearchResultPage;
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import lombok.Getter;
@@ -70,7 +71,7 @@ public class AndroidDrivers implements MobileDriverService {
             androidDriver.quit();
         }
     }
-    public AndroidDriver getDriver() {
+    public AppiumDriver getDriver() {
         return androidDriver;
     }
 }

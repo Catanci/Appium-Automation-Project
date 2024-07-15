@@ -1,5 +1,6 @@
 package appiumtests.gui.web.components;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -30,7 +31,7 @@ public class Header extends HeaderBase {
     @FindBy(xpath = "//android.view.View[@resource-id='gh-minicart-hover']")
     private WebElement cartIcon;
 
-    public Header(AndroidDriver driver) {
+    public Header(AppiumDriver driver) {
         super(driver);
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }

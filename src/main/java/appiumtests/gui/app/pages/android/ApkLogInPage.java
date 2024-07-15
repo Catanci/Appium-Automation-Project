@@ -1,6 +1,7 @@
 package appiumtests.gui.app.pages.android;
 
 import appiumtests.gui.app.pages.common.ApkLogInPageBase;
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -27,7 +28,7 @@ public class ApkLogInPage extends ApkLogInPageBase {
 
     private final Logger logger = LogManager.getLogger(ApkLogInPage.class);
 
-    public ApkLogInPage(AndroidDriver driver) {
+    public ApkLogInPage(AppiumDriver driver) {
         super(driver);
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);

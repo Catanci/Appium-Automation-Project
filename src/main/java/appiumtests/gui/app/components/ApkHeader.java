@@ -2,6 +2,7 @@ package appiumtests.gui.app.components;
 
 import appiumtests.gui.web.components.Header;
 import appiumtests.gui.web.pages.android.SearchResultPage;
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -35,7 +36,7 @@ public class ApkHeader extends ApkHeaderBase {
 
     private final Logger logger = LogManager.getLogger(SearchResultPage.class);
 
-    public ApkHeader(AndroidDriver driver) {
+    public ApkHeader(AppiumDriver driver) {
         super(driver);
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);

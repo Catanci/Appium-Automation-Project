@@ -1,6 +1,7 @@
 package appiumtests.gui.app.pages.android;
 
 import appiumtests.gui.app.pages.common.ApkCartPageBase;
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -37,7 +38,7 @@ public class ApkCartPage extends ApkCartPageBase {
 
     private final Logger logger = LogManager.getLogger(ApkCartPage.class);
 
-    public ApkCartPage(AndroidDriver driver) {
+    public ApkCartPage(AppiumDriver driver) {
         super(driver);
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);

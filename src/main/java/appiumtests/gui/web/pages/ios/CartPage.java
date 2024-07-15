@@ -1,9 +1,7 @@
-package appiumtests.gui.web.pages.android;
+package appiumtests.gui.web.pages.ios;
 
 import appiumtests.gui.web.pages.common.CartPageBase;
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import lombok.Getter;
 import org.apache.logging.log4j.LogManager;
@@ -19,19 +17,19 @@ import java.time.Duration;
 @Getter
 public class CartPage extends CartPageBase {
 
-    @FindBy(xpath = "//android.view.View[@resource-id=\"mainContent\"]/android.view.View[2]/android.view.View/android.widget.ListView/android.view.View/android.view.View/android.view.View[@text][2]")
+    @FindBy(xpath = "")
     private WebElement cartItemName;
 
-    @FindBy(xpath = "//android.view.View[@resource-id=\"mainContent\"]/android.view.View[3]/android.view.View/android.widget.ListView/android.view.View/android.view.View/android.widget.TextView[@text][2]")
+    @FindBy(xpath = "")
     private WebElement cartItemPrice;
 
-    @FindBy(xpath = "//android.widget.Button[@text][2]")
+    @FindBy(xpath = "")
     private WebElement remove;
 
-    @FindBy(xpath = "//android.view.View[@content-desc='eBay Home']")
+    @FindBy(xpath = "")
     private WebElement homeButton;
 
-    @FindBy(xpath = "//android.widget.TextView[@text='Shopping cart']")
+    @FindBy(xpath = "")
     private WebElement shoppingCartTitle;
 
 

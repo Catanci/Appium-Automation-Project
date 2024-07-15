@@ -4,33 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="694b4741-9309-4177-8be5-411a1ebe0548" name="Changes" comment="code refactor/apk tests">
-      <change afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/android/ApkCheckoutPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/android/ApkLogInPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/common/ApkCheckoutPageBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/common/ApkLogInPageBase.java" afterDir="false" />
+    <list default="true" id="694b4741-9309-4177-8be5-411a1ebe0548" name="Changes" comment="ios drivers">
+      <change afterPath="$PROJECT_DIR$/src/main/java/appiumtests/constants/CommonConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/ios/CartPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/ios/FiltersPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/ios/HomePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/ios/ProductPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/ios/SearchResultPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/appiumtests/util/driver/MobileDriverFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/constants/DriverConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/constants/DriverConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/constants/TestType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/constants/TestType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/components/ApkHeader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/components/ApkHeader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/components/ApkHeaderBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/components/ApkHeaderBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/android/ApkCartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/android/ApkCartPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/android/ApkCheckoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/android/ApkCheckoutPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/android/ApkHomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/android/ApkHomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/android/ApkLogInPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/android/ApkLogInPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/android/ApkProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/android/ApkProductPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/common/ApkCartPageBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/common/ApkCartPageBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/common/ApkCheckoutPageBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/common/ApkCheckoutPageBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/common/ApkHomePageBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/common/ApkHomePageBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/common/ApkLogInPageBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/common/ApkLogInPageBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/common/ApkProductPageBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/common/ApkProductPageBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/components/Header.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/components/Header.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/components/HeaderBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/components/HeaderBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/android/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/android/CartPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/android/FiltersPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/android/FiltersPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/android/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/android/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/android/ProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/android/ProductPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/android/SearchResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/android/SearchResultPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/common/CartPageBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/common/CartPageBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/common/FiltersPageBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/common/FiltersPageBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/common/HomePageBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/common/HomePageBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/common/ProductPageBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/common/ProductPageBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/common/SearchResultPageBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/common/SearchResultPageBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/util/driver/AndroidDrivers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/util/driver/AndroidDrivers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/util/driver/IOSDrivers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/util/driver/IOSDrivers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/androidtest/ApkBaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/androidtest/ApkBaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/androidtest/ApkHomePageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/androidtest/ApkHomePageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/androidtest/WebBaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/androidtest/WebBaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/device.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/device.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/util/driver/MobileDriverService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/util/driver/MobileDriverService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/androidtest/ApkBaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobiletest/ApkBaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/androidtest/ApkHomePageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobiletest/ApkHomePageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/androidtest/WebBaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobiletest/WebBaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/androidtest/WebHomePageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobiletest/WebHomePageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/regression-suite.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/regression-suite.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +109,7 @@
     "TestNG.WebHomePageTest.testProductSearch.executor": "Run",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/budaa/Desktop/appium-java-mobile-automation-demo-master",
+    "last_opened_file_path": "C:/Users/budaa/Desktop/project_java/Appium-Automation-Project/src/main/java/appiumtests/gui/web/pages/ios",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -107,33 +121,34 @@
       <recent name="webtest" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\budaa\Desktop\project_java\Appium-Automation-Project\src\main\java\appiumtests\gui\web\pages\ios" />
+      <recent name="C:\Users\budaa\Desktop\project_java\Appium-Automation-Project\src\main\java\appiumtests\gui\web\pages" />
       <recent name="C:\Users\budaa\Desktop\project_java\Appium-Automation-Project\src\main\java\appiumtests\gui\app" />
       <recent name="C:\Users\budaa\Desktop\Appium-Automation-Project\src\main\java\placeholderPackageName" />
       <recent name="C:\Users\budaa\Desktop\Appium-Automation-Project\src\test\resources" />
-      <recent name="C:\Users\budaa\Desktop\Appium-Automation-Project\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\budaa\Desktop\project_java\Appium-Automation-Project\src\test\resources\apps" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="appiumtests.constants" />
+      <recent name="appiumtests.util.driver" />
       <recent name="appiumtests.gui.app.pages.android" />
       <recent name="androidtest" />
       <recent name="apptest" />
-      <recent name="placeholderPackageName.common.constants" />
-      <recent name="placeholderPackageName.common.constant" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.WebHomePageTest.testProductSearch">
+  <component name="RunManager" selected="TestNG.ApkHomePageTest.verifyUserCanAddProductToCart">
     <configuration name="ApkHomePageTest.testPlaceholder" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="mobile-appium-java" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="androidtest.*" />
+          <option name="PATTERN" value="mobiletest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="androidtest" />
-      <option name="MAIN_CLASS_NAME" value="androidtest.ApkHomePageTest" />
+      <option name="MAIN_CLASS_NAME" value="mobiletest.ApkHomePageTest" />
       <option name="METHOD_NAME" value="testPlaceholder" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -146,12 +161,12 @@
       <module name="mobile-appium-java" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="androidtest.*" />
+          <option name="PATTERN" value="mobiletest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="androidtest" />
-      <option name="MAIN_CLASS_NAME" value="androidtest.ApkHomePageTest" />
+      <option name="MAIN_CLASS_NAME" value="mobiletest.ApkHomePageTest" />
       <option name="METHOD_NAME" value="verifySortingAscending" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -164,12 +179,12 @@
       <module name="mobile-appium-java" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="androidtest.*" />
+          <option name="PATTERN" value="mobiletest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="androidtest" />
-      <option name="MAIN_CLASS_NAME" value="androidtest.ApkHomePageTest" />
+      <option name="MAIN_CLASS_NAME" value="mobiletest.ApkHomePageTest" />
       <option name="METHOD_NAME" value="verifyUserCanAddProductToCart" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -182,12 +197,12 @@
       <module name="mobile-appium-java" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="androidtest.*" />
+          <option name="PATTERN" value="mobiletest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="androidtest" />
-      <option name="MAIN_CLASS_NAME" value="androidtest.ApkHomePageTest" />
+      <option name="MAIN_CLASS_NAME" value="mobiletest.ApkHomePageTest" />
       <option name="METHOD_NAME" value="verifyUserCanPlaceAnOrder" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -200,12 +215,12 @@
       <module name="mobile-appium-java" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="androidtest.*" />
+          <option name="PATTERN" value="mobiletest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="androidtest" />
-      <option name="MAIN_CLASS_NAME" value="androidtest.WebHomePageTest" />
+      <option name="MAIN_CLASS_NAME" value="mobiletest.WebHomePageTest" />
       <option name="METHOD_NAME" value="testProductSearch" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -216,10 +231,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ApkHomePageTest.verifyUserCanAddProductToCart" />
         <item itemvalue="TestNG.WebHomePageTest.testProductSearch" />
         <item itemvalue="TestNG.ApkHomePageTest.verifyUserCanPlaceAnOrder" />
         <item itemvalue="TestNG.ApkHomePageTest.verifySortingAscending" />
-        <item itemvalue="TestNG.ApkHomePageTest.verifyUserCanAddProductToCart" />
         <item itemvalue="TestNG.ApkHomePageTest.testPlaceholder" />
       </list>
     </recent_temporary>
@@ -313,7 +328,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720782819522</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="ios drivers">
+      <option name="closed" value="true" />
+      <created>1721042721682</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1721042721682</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -333,6 +356,7 @@
     <MESSAGE value="implementing tests" />
     <MESSAGE value="implementing tests for android web" />
     <MESSAGE value="code refactor/apk tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="code refactor/apk tests" />
+    <MESSAGE value="ios drivers" />
+    <option name="LAST_COMMIT_MESSAGE" value="ios drivers" />
   </component>
 </project>

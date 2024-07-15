@@ -1,4 +1,4 @@
-package androidtest;
+package mobiletest;
 
 import appiumtests.gui.web.components.Header;
 import appiumtests.gui.web.pages.android.*;

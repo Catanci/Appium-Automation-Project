@@ -2,6 +2,7 @@ package appiumtests.gui.app.pages.android;
 
 import appiumtests.gui.app.pages.common.ApkProductPageBase;
 import appiumtests.gui.web.pages.common.ProductPageBase;
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -40,7 +41,7 @@ public class ApkProductPage extends ApkProductPageBase {
 
     private final WebDriverWait wait;
 
-    public ApkProductPage(AndroidDriver driver) {
+    public ApkProductPage(AppiumDriver driver) {
         super(driver);
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
