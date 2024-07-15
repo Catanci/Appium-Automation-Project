@@ -33,15 +33,38 @@ public class ApkHomePage extends ApkHomePageBase {
     @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc='open menu']/android.widget.ImageView")
     private WebElement burgerMenu;
 
+    @AndroidFindBy(xpath = "//android.widget.TextView[@content-desc='store item price' and @text]")
+    private List<WebElement> price;
+
+    @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc='sort button']/android.widget.ImageView")
+    private WebElement sortButton;
+
+    @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc='priceAsc']")
+    private WebElement priceAsc;
+
+    @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc='priceDesc']")
+    private WebElement priceDesc;
+
     private final WebDriverWait wait;
 
     private final Logger logger = LogManager.getLogger(ApkHomePage.class);
-
 
     public ApkHomePage(AndroidDriver driver) {
         super(driver);
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
+
+    public String getPrice(int index) {
+        List<WebElement> priceList = getPrice();
+        WebElement targetElement = priceList.get(index);
+        return targetElement.getText();
+    }
+
+    public boolean isPriceLower(String price1, String price2) {
+        double value1 = Double.parseDouble(price1.replace("$",""));
+        double value2 = Double.parseDouble(price2.replace("$", ""));
+        return value1 < value2;
     }
 
     public void tapResultByIndex(int index) {
@@ -68,6 +91,16 @@ public class ApkHomePage extends ApkHomePageBase {
         burgerMenu.click();
     }
 
+    public void tapSortButton() {
+        sortButton.click();
+    }
 
+    public void tapPriceAscending() {
+        priceAsc.click();
+    }
+
+    public void tapPriceDescending() {
+        priceDesc.click();
+    }
 }
 

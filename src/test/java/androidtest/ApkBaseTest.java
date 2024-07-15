@@ -4,7 +4,10 @@ import appiumtests.constants.Direction;
 import appiumtests.constants.TestType;
 import appiumtests.util.driver.AndroidDrivers;
 import appiumtests.util.driver.MobileDriverService;
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
+import org.apache.commons.lang3.RandomStringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Dimension;
@@ -15,6 +18,7 @@ import org.testng.annotations.BeforeMethod;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.Random;
 
 public class ApkBaseTest {
     protected MobileDriverService driverService;
@@ -99,4 +103,22 @@ public class ApkBaseTest {
 
         logger.debug("Pause is over. Keep going..");
     }
+
+    public static String createRandomAddress() {
+        int streetNumber = new Random().nextInt(8999) + 1000; // 1000 to 9999
+        String streetName = StringUtils.capitalize(RandomStringUtils.randomAlphabetic(10).toLowerCase());
+        return String.format("%d %s St", streetNumber, streetName);
+    }
+
+    public static String createRandomCardNumber() {
+        return String.format("%s-%s-%s-%s",
+                RandomStringUtils.randomNumeric(4),
+                RandomStringUtils.randomNumeric(4),
+                RandomStringUtils.randomNumeric(4),
+                RandomStringUtils.randomNumeric(4));
+    }
+
+
+
+
 }

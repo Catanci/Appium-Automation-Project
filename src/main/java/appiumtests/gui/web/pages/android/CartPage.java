@@ -8,6 +8,7 @@ import lombok.Getter;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -17,19 +18,19 @@ import java.time.Duration;
 @Getter
 public class CartPage extends CartPageBase {
 
-    @AndroidFindBy(xpath = "//android.view.View[@resource-id=\"mainContent\"]/android.view.View[2]/android.view.View/android.widget.ListView/android.view.View/android.view.View/android.view.View[@text][2]")
+    @FindBy(xpath = "//android.view.View[@resource-id=\"mainContent\"]/android.view.View[2]/android.view.View/android.widget.ListView/android.view.View/android.view.View/android.view.View[@text][2]")
     private WebElement cartItemName;
 
-    @AndroidFindBy(xpath = "//android.view.View[@resource-id=\"mainContent\"]/android.view.View[3]/android.view.View/android.widget.ListView/android.view.View/android.view.View/android.widget.TextView[@text][2]")
+    @FindBy(xpath = "//android.view.View[@resource-id=\"mainContent\"]/android.view.View[3]/android.view.View/android.widget.ListView/android.view.View/android.view.View/android.widget.TextView[@text][2]")
     private WebElement cartItemPrice;
 
-    @AndroidFindBy(xpath = "//android.widget.Button[@text][2]")
+    @FindBy(xpath = "//android.widget.Button[@text][2]")
     private WebElement remove;
 
-    @AndroidFindBy(xpath = "//android.view.View[@content-desc='eBay Home']")
+    @FindBy(xpath = "//android.view.View[@content-desc='eBay Home']")
     private WebElement homeButton;
 
-    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Shopping cart']")
+    @FindBy(xpath = "//android.widget.TextView[@text='Shopping cart']")
     private WebElement shoppingCartTitle;
 
 

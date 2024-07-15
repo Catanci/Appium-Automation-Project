@@ -30,6 +30,9 @@ public class ApkCartPage extends ApkCartPageBase {
     @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc='Go Shopping button']")
     private WebElement goShoppingButton;
 
+    @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc='Proceed To Checkout button']")
+    private WebElement proceedToCheckoutButton;
+
     private final WebDriverWait wait;
 
     private final Logger logger = LogManager.getLogger(ApkCartPage.class);
@@ -45,7 +48,7 @@ public class ApkCartPage extends ApkCartPageBase {
             Thread.sleep(1000);
             logger.info("Attempting to retrieve item count");
             String counter = itemCounter.getText();
-            logger.info("Product name retrieved: " + counter);
+            logger.info("Product count retrieved: " + counter);
             return counter;
         }
         catch (Exception e) {
@@ -83,6 +86,7 @@ public class ApkCartPage extends ApkCartPageBase {
         goShoppingButton.click();
     }
 
-
-
+    public void tapProceedToCheckout() {
+        proceedToCheckoutButton.click();
+    }
 }

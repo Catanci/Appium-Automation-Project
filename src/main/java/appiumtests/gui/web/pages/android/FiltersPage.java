@@ -8,6 +8,7 @@ import lombok.Getter;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -17,19 +18,19 @@ import java.time.Duration;
 @Getter
 public class FiltersPage extends FiltersPageBase {
 
-    @AndroidFindBy(xpath = "//android.widget.Button[@text='Buy It Now']")
+    @FindBy(xpath = "//android.widget.Button[@text='Buy It Now']")
     private WebElement buyItNowFilter;
 
-    @AndroidFindBy(xpath = "//android.widget.Button[@text='Show More']")
+    @FindBy(xpath = "//android.widget.Button[@text='Show More']")
     private WebElement showMoreButton;
 
-    @AndroidFindBy(xpath = "//android.widget.ToggleButton[@resource-id='switch__LH_ItemCondition']")
+    @FindBy(xpath = "//android.widget.ToggleButton[@resource-id='switch__LH_ItemCondition']")
     private WebElement eBayRefurbishedFilter;
 
-    @AndroidFindBy(xpath = "//android.app.Dialog[@text='Filter']/android.view.View/android.view.View[3]/android.widget.Button")
+    @FindBy(xpath = "//android.app.Dialog[@text='Filter']/android.view.View/android.view.View[3]/android.widget.Button")
     private WebElement showResultsButton;
 
-    @AndroidFindBy(xpath = "//android.widget.TextView[@resource-id='filter__title filter__title--hub']")
+    @FindBy(xpath = "//android.widget.TextView[@resource-id='filter__title filter__title--hub']")
     private WebElement title;
 
     private final Logger logger = LogManager.getLogger(FiltersPage.class);

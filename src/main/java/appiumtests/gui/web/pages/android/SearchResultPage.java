@@ -1,4 +1,5 @@
 package appiumtests.gui.web.pages.android;
+
 import appiumtests.gui.web.pages.common.SearchResultPageBase;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
@@ -9,6 +10,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
 
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -20,16 +22,16 @@ import java.util.stream.Collectors;
 @Getter
 public class SearchResultPage extends SearchResultPageBase {
 
-    @AndroidFindBy(xpath = "//android.view.View[@content-desc]/android.view.View[1]")
+    @FindBy(xpath = "//android.view.View[@content-desc]/android.view.View[1]")
     private List<WebElement> searchResultsList;
 
-    @AndroidFindBy(xpath = "//android.view.View[@resource-id=\"mainContent\"]/android.view.View[1]/android.view.View/android.widget.TextView[@text]")
+    @FindBy(xpath = "//android.view.View[@resource-id=\"mainContent\"]/android.view.View[1]/android.view.View/android.widget.TextView[@text]")
     private WebElement searchResultCount;
 
-    @AndroidFindBy(xpath = "//android.view.View[@resource-id='mainContent']/android.view.View[1]/android.view.View")
+    @FindBy(xpath = "//android.view.View[@resource-id='mainContent']/android.view.View[1]/android.view.View")
     private WebElement bottomResultsCount;
 
-    @AndroidFindBy(xpath = "//android.widget.Button[@text='Filter']")
+    @FindBy(xpath = "//android.widget.Button[@text='Filter']")
     private WebElement filter;
 
     private final Logger logger = LogManager.getLogger(SearchResultPage.class);

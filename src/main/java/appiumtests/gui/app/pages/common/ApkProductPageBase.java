@@ -13,6 +13,18 @@ public abstract class ApkProductPageBase {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
+    public abstract boolean isBannerVisible();
+
+    public abstract String getCounterAmount();
+
+    public abstract String getCartIconItemCount();
+
+    public abstract void tapPlusButton();
+
+    public abstract void tapAddToCart();
+
+    public abstract void tapCartIcon();
+
 
 
 

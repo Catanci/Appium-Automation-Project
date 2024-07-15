@@ -11,4 +11,17 @@ public abstract class ApkCartPageBase {
         this.driver = driver;
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
+
+    public abstract String getCounterAmount();
+
+    public abstract boolean isColorCorrect();
+
+    public abstract boolean isCartEmpty();
+
+    public abstract void tapRemoveButton();
+
+    public abstract void tapGoBack();
+
+    public abstract void tapProceedToCheckout();
+
 }

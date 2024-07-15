@@ -23,7 +23,6 @@ public class AndroidDrivers implements MobileDriverService {
 
     private final Logger logger = LogManager.getLogger(AndroidDriver.class);
 
-
     @Override
     public void startUpDriver(TestType testType) {
         UiAutomator2Options options = new UiAutomator2Options();

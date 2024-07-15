@@ -7,6 +7,7 @@ import lombok.Getter;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -19,31 +20,31 @@ import java.util.stream.Collectors;
 @Getter
 public class HomePage extends HomePageBase {
 
-    @AndroidFindBy(xpath = "//android.widget.EditText[@resource-id='gh-ac']")
+    @FindBy(xpath = "//android.widget.EditText[@resource-id='gh-ac']")
     private WebElement searchBar;
 
-    @AndroidFindBy(xpath = "//android.view.View[@content-desc='eBay Home']")
+    @FindBy(xpath = "//android.view.View[@content-desc='eBay Home']")
     private WebElement homeButton;
 
-    @AndroidFindBy(xpath = "//android.widget.Button[@resource-id='gh-btn']")
+    @FindBy(xpath = "//android.widget.Button[@resource-id='gh-btn']")
     private WebElement searchButton;
 
-    @AndroidFindBy(xpath = "//android.widget.ListView[@resource-id='s0-1-0-50-1-2-4-17[0[0]]-0[0]-7-@match-media-0-@ebay-carousel-list']/android.view.View/android.view.View/android.view.View[1]")
+    @FindBy(xpath = "//android.widget.ListView[@resource-id='s0-1-0-50-1-2-4-17[0[0]]-0[0]-7-@match-media-0-@ebay-carousel-list']/android.view.View/android.view.View/android.view.View[1]")
     private List<WebElement> carouselItems;
 
-    @AndroidFindBy(xpath = "//android.view.View[@resource-id]/android.widget.Button[@text][1]")
+    @FindBy(xpath = "//android.view.View[@resource-id]/android.widget.Button[@text][1]")
     private WebElement swipeLeft;
 
-    @AndroidFindBy(xpath = "//android.view.View[@resource-id]/android.widget.Button[@text][2]")
+    @FindBy(xpath = "//android.view.View[@resource-id]/android.widget.Button[@text][2]")
     private WebElement swipeRight;
 
-    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Your Recently Viewed Items']")
+    @FindBy(xpath = "//android.widget.TextView[@text='Your Recently Viewed Items']")
     private WebElement recentlyViewedItemsBanner;
 
-    @AndroidFindBy(xpath = "//android.widget.ListView[@resource-id='s0-1-0-50-1-2-4-17[0[0]]-0[0]-7-@match-media-0-@ebay-carousel-list']//android.widget.TextView[@text][1]")
+    @FindBy(xpath = "//android.widget.ListView[@resource-id='s0-1-0-50-1-2-4-17[0[0]]-0[0]-7-@match-media-0-@ebay-carousel-list']//android.widget.TextView[@text][1]")
     private List<WebElement> carouselItemName;
 
-    @AndroidFindBy(xpath = "//android.view.View[@content-desc='Your shopping cart']")
+    @FindBy(xpath = "//android.view.View[@content-desc='Your shopping cart']")
     private WebElement emptyCart;
 
     private final WebDriverWait wait;
