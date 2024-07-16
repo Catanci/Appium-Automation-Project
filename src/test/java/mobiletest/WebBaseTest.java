@@ -19,19 +19,24 @@ import org.openqa.selenium.Dimension;
 import java.time.Duration;
 import java.util.List;
 
+import static appiumtests.constants.DriverConstants.APPIUM_DRIVER_TIMEOUT_IN_SECONDS;
+import static io.appium.java_client.remote.MobilePlatform.ANDROID;
+
 public class WebBaseTest {
-    protected MobileDriverService driverService = new MobileDriverFactory().getDriverService();
+    protected MobileDriverService driverService;
     protected AppiumDriver driver;
-    private final Logger logger = LogManager.getLogger(WebBaseTest.class);
+    private final Logger logger = LogManager.getLogger(ApkBaseTest.class);
 
     @BeforeMethod
     public void setUp() {
-        driverService = new AndroidDrivers();
+        MobileDriverFactory driverFactory = new MobileDriverFactory();
+        driverService = driverFactory.getDriverService();
         driverService.startUpDriver(TestType.WEB);
         driver = driverService.getDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-        logger.info("Driver started successfully");
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(APPIUM_DRIVER_TIMEOUT_IN_SECONDS));
+        logger.info("Driver started successfully for platform: {}", System.getProperty("platform", ANDROID));
     }
+
 
     protected void quitDriver() {
         if (driverService != null) {

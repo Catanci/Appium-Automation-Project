@@ -4,6 +4,7 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import lombok.Getter;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -21,31 +22,38 @@ import java.util.stream.Collectors;
 @Getter
 public class HomePage extends HomePageBase {
 
-    @FindBy(xpath = "//android.widget.EditText[@resource-id='gh-ac']")
+//    @FindBy(className = "//android.widget.EditText[@resource-id='gh-ac']")
+    @FindBy(id = "gh-ac")
     private WebElement searchBar;
-    
-    @FindBy(xpath = "//android.view.View[@content-desc='eBay Home']")
+
+//    @AndroidFindBy(xpath = "//android.view.View[@content-desc='eBay Home']")
+    @FindBy(id = "gh-logo")
     private WebElement homeButton;
 
     @FindBy(xpath = "//android.widget.Button[@resource-id='gh-btn']")
     private WebElement searchButton;
 
-    @FindBy(xpath = "//android.widget.ListView[@resource-id='s0-1-0-50-1-2-4-17[0[0]]-0[0]-7-@match-media-0-@ebay-carousel-list']/android.view.View/android.view.View/android.view.View[1]")
+//    @FindBy(xpath = "//android.widget.ListView[@resource-id='s0-1-0-50-1-2-4-17[0[0]]-0[0]-7-@match-media-0-@ebay-carousel-list']/android.view.View/android.view.View/android.view.View[1]")
+    @FindBy(id = "s0-1-0-50-1-2-4-17[0[0]]-0[3]-7-@match-media-0-@ebay-carousel-container")
     private List<WebElement> carouselItems;
 
-    @FindBy(xpath = "//android.view.View[@resource-id]/android.widget.Button[@text][1]")
+//    @FindBy(xpath = "//android.view.View[@resource-id]/android.widget.Button[@text][1]")
+    @FindBy(xpath = "//button[@class='carousel__control carousel__control--prev']")
     private WebElement swipeLeft;
 
-    @FindBy(xpath = "//android.view.View[@resource-id]/android.widget.Button[@text][2]")
+//    @FindBy(xpath = "//android.view.View[@resource-id]/android.widget.Button[@text][2]")
+    @FindBy(id = "s0-1-0-50-1-2-4-17[0[0]]-0[3]-7-@match-media-0-@ebay-carousel-next")
     private WebElement swipeRight;
 
-    @FindBy(xpath = "//android.widget.TextView[@text='Your Recently Viewed Items']")
+    @FindBy(xpath = "//h2[@class='vl-card-header__headline']")
     private WebElement recentlyViewedItemsBanner;
 
-    @FindBy(xpath = "//android.widget.ListView[@resource-id='s0-1-0-50-1-2-4-17[0[0]]-0[0]-7-@match-media-0-@ebay-carousel-list']//android.widget.TextView[@text][1]")
+//    @FindBy(xpath = "//android.widget.ListView[@resource-id='s0-1-0-50-1-2-4-17[0[0]]-0[0]-7-@match-media-0-@ebay-carousel-list']//android.widget.TextView[@text][1]")
+    @FindBy(xpath = "//h3[contains(@class,'vlp-merch-item-title vlp-merch-item-title-dweb')]")
     private List<WebElement> carouselItemName;
 
-    @FindBy(xpath = "//android.view.View[@content-desc='Your shopping cart']")
+//    @FindBy(xpath = "//android.view.View[@content-desc='Your shopping cart']")
+    @FindBy(className = "gh-cart-icon")
     private WebElement emptyCart;
 
     private final WebDriverWait wait;
@@ -132,7 +140,7 @@ public class HomePage extends HomePageBase {
 
     @Override
     public void search(String search) {
-        logger.info("Attempting to search for the product: " + search);
+        logger.info("Attempting to search for the product: {}", search);
         searchBar.click();
         searchBar.sendKeys(search);
     }

@@ -1,12 +1,10 @@
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Regression Test Suite">
-    <test name="Regression Test">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Mobile Test Suite">
+    <parameter name="platform" value="${platform}"/>
+    <test name="Mobile Tests">
         <classes>
-            <class name="mobiletest.WebHomePageTest">
-                <methods>
-                    <include name="placeholder"/>
-                </methods>
-            </class>
+            <class name="mobiletest.ApkHomePageTest"/>
+            <!-- Add other test classes as needed -->
         </classes>
     </test>
 </suite>

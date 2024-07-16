@@ -19,19 +19,19 @@ import java.time.Duration;
 @Getter
 public class FiltersPage extends FiltersPageBase {
 
-    @FindBy(xpath = "//android.widget.Button[@text='Buy It Now']")
+    @AndroidFindBy(xpath = "//android.widget.Button[@text='Buy It Now']")
     private WebElement buyItNowFilter;
 
-    @FindBy(xpath = "//android.widget.Button[@text='Show More']")
+    @AndroidFindBy(xpath = "//android.widget.Button[@text='Show More']")
     private WebElement showMoreButton;
 
-    @FindBy(xpath = "//android.widget.ToggleButton[@resource-id='switch__LH_ItemCondition']")
+    @AndroidFindBy(xpath = "//android.widget.ToggleButton[@resource-id='switch__LH_ItemCondition']")
     private WebElement eBayRefurbishedFilter;
 
-    @FindBy(xpath = "//android.app.Dialog[@text='Filter']/android.view.View/android.view.View[3]/android.widget.Button")
+    @AndroidFindBy(xpath = "//android.app.Dialog[@text='Filter']/android.view.View/android.view.View[3]/android.widget.Button")
     private WebElement showResultsButton;
 
-    @FindBy(xpath = "//android.widget.TextView[@resource-id='filter__title filter__title--hub']")
+    @AndroidFindBy(xpath = "//android.widget.TextView[@resource-id='filter__title filter__title--hub']")
     private WebElement title;
 
     private final Logger logger = LogManager.getLogger(FiltersPage.class);

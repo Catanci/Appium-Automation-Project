@@ -2,7 +2,6 @@ package mobiletest;
 
 import appiumtests.constants.Direction;
 import appiumtests.constants.TestType;
-import appiumtests.util.driver.AndroidDrivers;
 import appiumtests.util.driver.MobileDriverFactory;
 import appiumtests.util.driver.MobileDriverService;
 import io.appium.java_client.AppiumDriver;
@@ -20,18 +19,22 @@ import java.time.Duration;
 import java.util.List;
 import java.util.Random;
 
+import static appiumtests.constants.DriverConstants.APPIUM_DRIVER_TIMEOUT_IN_SECONDS;
+import static io.appium.java_client.remote.MobilePlatform.ANDROID;
+
 public class ApkBaseTest {
-    protected MobileDriverService driverService = new MobileDriverFactory().getDriverService();
+    protected MobileDriverService driverService;
     protected AppiumDriver driver;
     private final Logger logger = LogManager.getLogger(ApkBaseTest.class);
 
     @BeforeMethod
     public void setUp() {
-        driverService = new AndroidDrivers();
+        MobileDriverFactory driverFactory = new MobileDriverFactory();
+        driverService = driverFactory.getDriverService();
         driverService.startUpDriver(TestType.APK);
         driver = driverService.getDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-        logger.info("Driver started successfully");
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(APPIUM_DRIVER_TIMEOUT_IN_SECONDS));
+        logger.info("Driver started successfully for platform: {}", System.getProperty("platform", ANDROID));
     }
 
     protected void quitDriver() {

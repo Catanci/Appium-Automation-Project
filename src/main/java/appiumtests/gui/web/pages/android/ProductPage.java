@@ -19,35 +19,35 @@ import java.time.Duration;
 @Getter
 public class ProductPage extends ProductPageBase {
 
-    @FindBy(xpath = "//android.widget.TextView[@text='Back to search results']")
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Back to search results']")
     private WebElement backToResultsText;
 
-    @FindBy(xpath = "//android.view.View[@content-desc=\"eBay Home\"]")
+    @AndroidFindBy(xpath = "//android.view.View[@content-desc=\"eBay Home\"]")
     private WebElement logoHomeButton;
 
-    @FindBy(xpath = "(//android.view.View[@resource-id='RightSummaryPanel']//android.view.View[@resource-id='mainContent']/android.view.View/android.widget.TextView[@text])[1]")
+    @AndroidFindBy(xpath = "(//android.view.View[@resource-id='RightSummaryPanel']//android.view.View[@resource-id='mainContent']/android.view.View/android.widget.TextView[@text])[1]")
     private WebElement productName;
 
-    @FindBy(xpath = "//android.view.View[@resource-id='mainContent']/android.widget.TextView[@text][1]")
+    @AndroidFindBy(xpath = "//android.view.View[@resource-id='mainContent']/android.widget.TextView[@text][1]")
     private WebElement productPrice;
 
-    @FindBy(xpath = "//android.view.View[@content-desc='Buy It Now']")
+    @AndroidFindBy(xpath = "//android.view.View[@content-desc='Buy It Now']")
     private WebElement buyItNowButton;
 
-    @FindBy(xpath = "//android.view.View[@resource-id='mainContent']/android.widget.TextView[@text][3]")
+    @AndroidFindBy(xpath = "//android.view.View[@resource-id='mainContent']/android.widget.TextView[@text][3]")
     private WebElement conditionText;
 
-    @FindBy(xpath = "//android.view.View[@content-desc='Add to cart']")
+    @AndroidFindBy(xpath = "//android.view.View[@content-desc='Add to cart']")
     private WebElement viewCartButton;
 
     //Cart Overlay
-    @FindBy(xpath = "//android.app.Dialog[@text='1 item added to cart']/android.view.View/android.view.View[2]/android.widget.TextView[@text][2]")
+    @AndroidFindBy(xpath = "//android.app.Dialog[@text='1 item added to cart']/android.view.View/android.view.View[2]/android.widget.TextView[@text][2]")
     private WebElement cartOverlayProductName;
 
-    @FindBy(xpath = "//android.app.Dialog[@text='1 item added to cart']/android.view.View/android.view.View[2]/android.view.View[2]/android.widget.TextView[@text]")
+    @AndroidFindBy(xpath = "//android.app.Dialog[@text='1 item added to cart']/android.view.View/android.view.View[2]/android.view.View[2]/android.widget.TextView[@text]")
     private WebElement cartOverlayProductPrice;
 
-    @FindBy(xpath = "//android.widget.Button[@text='Close the show me how overlay']")
+    @AndroidFindBy(xpath = "//android.widget.Button[@text='Close the show me how overlay']")
     private WebElement closeButton;
 
     private final Logger logger = LogManager.getLogger(ProductPage.class);

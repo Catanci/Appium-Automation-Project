@@ -12,6 +12,7 @@ import java.net.URL;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.Duration;
+import java.util.Set;
 
 import static appiumtests.constants.DriverConstants.*;
 
@@ -34,11 +35,11 @@ public class IOSDrivers implements MobileDriverService {
 
         if (testType == TestType.WEB) {
             logger.info("Setting up WEB test...");
-            options.setBundleId(IOS_BUNDLE_ID);
-        } else if (testType == TestType.APP) {
+            options.setCapability("browserName", IOS_BROWSER_NAME);
+            options.setCapability("startIWDP", true);
+
+        } else if (testType == TestType.APK) {
             logger.info("Setting up APP test...");
-            Path appPath = Paths.get(IOS_APP_PATH).toAbsolutePath();
-            options.setApp(appPath.toString());
             options.setNoReset(false);
             options.setBundleId(IOS_BUNDLE_ID);
         }
@@ -47,12 +48,28 @@ public class IOSDrivers implements MobileDriverService {
             logger.debug("Attempting to create IOSDriver...");
             iosDriver = new IOSDriver(new URL(APPIUM_URL), options);
             logger.info("IOSDriver created successfully");
+
+            // Switch to webview context if it's a WEB test
+            if (testType == TestType.WEB) {
+                switchToWebViewContext();
+            }
         } catch (Exception e) {
             logger.error("Error creating IOSDriver: " + e.getMessage());
             e.printStackTrace();
         }
 
         iosDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(APPIUM_DRIVER_TIMEOUT_IN_SECONDS));
+    }
+
+    private void switchToWebViewContext() {
+        Set<String> contextHandles = iosDriver.getContextHandles();
+        for (String contextHandle : contextHandles) {
+            if (contextHandle.contains("WEBVIEW")) {
+                iosDriver.context(contextHandle);
+                logger.info("Switched to WEBVIEW context");
+                break;
+            }
+        }
     }
 
     @Override

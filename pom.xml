@@ -17,8 +17,7 @@
         <project.lombok.version>1.18.30</project.lombok.version>
         <log4j.api.version>2.17.1</log4j.api.version>
         <log4j.core.version>2.17.1</log4j.core.version>
-        <platform>android</platform>
-
+        <platform>iOS</platform> <!-- Default platform -->
     </properties>
 
     <dependencies>
@@ -74,6 +73,24 @@
         </dependency>
     </dependencies>
 
+    <profiles>
+        <!-- Profile for Android -->
+        <profile>
+            <id>android</id>
+            <properties>
+                <platform>Android</platform>
+            </properties>
+        </profile>
+
+        <!-- Profile for iOS -->
+        <profile>
+            <id>ios</id>
+            <properties>
+                <platform>iOS</platform>
+            </properties>
+        </profile>
+    </profiles>
+
     <build>
         <plugins>
             <!-- Maven Plugin -->
@@ -97,7 +114,7 @@
                     </systemPropertyVariables>
                     <useSystemClassLoader>false</useSystemClassLoader>
                     <suiteXmlFiles>
-                        <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
+                        <suiteXmlFile>src/test/resources/regression-suite.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>

@@ -21,6 +21,6 @@ public class CommonConstants {
             platformName = ANDROID;
         }
 
-        return platformName.toLowerCase();
+        return platformName;
     }
 }

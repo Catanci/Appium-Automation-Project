@@ -23,16 +23,16 @@ import java.util.stream.Collectors;
 @Getter
 public class SearchResultPage extends SearchResultPageBase {
 
-    @FindBy(xpath = "//android.view.View[@content-desc]/android.view.View[1]")
+    @AndroidFindBy(xpath = "//android.view.View[@content-desc]/android.view.View[1]")
     private List<WebElement> searchResultsList;
 
-    @FindBy(xpath = "//android.view.View[@resource-id=\"mainContent\"]/android.view.View[1]/android.view.View/android.widget.TextView[@text]")
+    @AndroidFindBy(xpath = "//android.view.View[@resource-id=\"mainContent\"]/android.view.View[1]/android.view.View/android.widget.TextView[@text]")
     private WebElement searchResultCount;
 
-    @FindBy(xpath = "//android.view.View[@resource-id='mainContent']/android.view.View[1]/android.view.View")
+    @AndroidFindBy(xpath = "//android.view.View[@resource-id='mainContent']/android.view.View[1]/android.view.View")
     private WebElement bottomResultsCount;
 
-    @FindBy(xpath = "//android.widget.Button[@text='Filter']")
+    @AndroidFindBy(xpath = "//android.widget.Button[@text='Filter']")
     private WebElement filter;
 
     private final Logger logger = LogManager.getLogger(SearchResultPage.class);

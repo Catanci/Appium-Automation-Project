@@ -6,6 +6,7 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import lombok.Getter;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -20,15 +21,19 @@ import java.time.Duration;
 public class ApkHeader extends ApkHeaderBase {
     protected AndroidDriver driver;
 
+    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeOther[@name=\"Catalog, tab, 1 of 3 0 Menu, tab, 3 of 3\"])[1]/XCUIElementTypeOther[2]")
     @AndroidFindBy(xpath = "//android.widget.FrameLayout[@resource-id='android:id/content']/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup")
     private Header header;
 
+    @iOSXCUITFindBy(accessibility = "tab bar option menu")
     @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc='open menu']")
     private WebElement menu;
 
+    @iOSXCUITFindBy(accessibility = "sort button")
     @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc='sort button']/android.widget.ImageView")
     private WebElement sortButton;
 
+    @iOSXCUITFindBy(accessibility = "tab bar option cart")
     @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc='cart badge']/android.widget.ImageView")
     private WebElement cartIcon;
 

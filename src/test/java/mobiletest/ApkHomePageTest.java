@@ -1,7 +1,7 @@
 package mobiletest;
 
 import appiumtests.constants.Direction;
-import appiumtests.gui.app.pages.android.*;
+import appiumtests.gui.app.pages.mobile.*;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.testng.Assert;
@@ -19,6 +19,7 @@ public class ApkHomePageTest extends ApkBaseTest {
         apkHomePage.tapResultByIndex(0);
 
         ApkProductPage apkProductPage = new ApkProductPage(driver);
+        swipeScreen(Direction.UP);
         Assert.assertTrue(apkProductPage.isBannerVisible(),
                 "User has been redirected to a different page");
         apkProductPage.tapRedOption();
@@ -32,7 +33,6 @@ public class ApkHomePageTest extends ApkBaseTest {
         String cartCounterAmount = apkProductPage.getCartIconItemCount();
         softAssert.assertEquals(cartCounterAmount, expectedAmount,
                 "Amount of items added to cart is wrong");
-
 
         apkProductPage.tapCartIcon();
         ApkCartPage apkCartPage = new ApkCartPage(driver);
@@ -59,6 +59,7 @@ public class ApkHomePageTest extends ApkBaseTest {
         apkHomePage.tapResultByIndex(0);
 
         ApkProductPage apkProductPage = new ApkProductPage(driver);
+        swipeScreen(Direction.UP);
         Assert.assertTrue(apkProductPage.isBannerVisible(),
                 "User has been redirected to a different page");
         apkProductPage.tapRedOption();
@@ -108,6 +109,7 @@ public class ApkHomePageTest extends ApkBaseTest {
         apkCheckoutPage.fillState(state);
         apkCheckoutPage.fillZipCode(zipCode);
         apkCheckoutPage.fillCountry(country);
+        apkCheckoutPage.dismissKeyboardCheckoutPage();
 
         apkCheckoutPage.tapToPaymentButton();
         Assert.assertTrue(apkCheckoutPage.isPaymentPageOpened(),
@@ -117,6 +119,7 @@ public class ApkHomePageTest extends ApkBaseTest {
         apkCheckoutPage.fillCardNumber(credit);
         apkCheckoutPage.fillExpirationDate(exp);
         apkCheckoutPage.fillSecurityCode(security);
+        apkCheckoutPage.dismissKeyboardReviewPage();
 
         pause(2);
         apkCheckoutPage.tapReviewButton();

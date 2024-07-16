@@ -40,8 +40,8 @@ public class AndroidDrivers implements MobileDriverService {
             logger.info("Setting up WEB test...");
             options.setAppPackage(ANDROID_APP_PACKAGE);
             options.setAppActivity(ANDROID_APP_ACTIVITY);
-            logger.debug("App Package: " + ANDROID_APP_APK_PACKAGE);
-            logger.debug("App Activity: " + ANDROID_APP_APK_ACTIVITY);
+            logger.debug("App Package: " + ANDROID_APP_PACKAGE);
+            logger.debug("App Activity: " + ANDROID_APP_ACTIVITY);
         } else if (testType == TestType.APK) {
             logger.info("Setting up APK test...");
             Path appPath = Paths.get(ANDROID_APP_APK_PATH).toAbsolutePath();

@@ -13,22 +13,22 @@ import org.openqa.selenium.support.PageFactory;
 public class Header extends HeaderBase {
     protected AndroidDriver driver;
 
-    @FindBy(xpath = "//android.view.View[@resource-id='mw-hdr']/android.view.View[2]")
+    @AndroidFindBy(xpath = "//android.view.View[@resource-id='mw-hdr']/android.view.View[2]")
     private Header header;
 
-    @FindBy(xpath = "//android.widget.Button[@text='Open Menu']")
+    @AndroidFindBy(xpath = "//android.widget.Button[@text='Open Menu']")
     private WebElement myEbayMenu;
 
-    @FindBy(xpath = "//android.view.View[@content-desc='Your shopping cart is empty']")
+    @AndroidFindBy(xpath = "//android.view.View[@content-desc='Your shopping cart is empty']")
     private WebElement emptyShoppingCart;
 
-    @FindBy(xpath = "//android.widget.TextView[@text='My eBay']")
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='My eBay']")
     private WebElement myEbay;
 
-    @FindBy(xpath = "//android.widget.TextView[@text='Gift Cards']")
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Gift Cards']")
     private WebElement giftCards;
 
-    @FindBy(xpath = "//android.view.View[@resource-id='gh-minicart-hover']")
+    @AndroidFindBy(xpath = "//android.view.View[@resource-id='gh-minicart-hover']")
     private WebElement cartIcon;
 
     public Header(AppiumDriver driver) {
