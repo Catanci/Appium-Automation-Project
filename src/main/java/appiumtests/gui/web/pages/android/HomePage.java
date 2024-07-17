@@ -6,8 +6,10 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import lombok.Getter;
+import net.bytebuddy.asm.Advice;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -22,15 +24,16 @@ import java.util.stream.Collectors;
 @Getter
 public class HomePage extends HomePageBase {
 
-//    @FindBy(className = "//android.widget.EditText[@resource-id='gh-ac']")
-    @FindBy(id = "gh-ac")
+//    @AndroidFindBy(xpath = "//android.widget.EditText[@resource-id='gh-ac']")
+    @FindBy(id = "kw")
     private WebElement searchBar;
 
 //    @AndroidFindBy(xpath = "//android.view.View[@content-desc='eBay Home']")
     @FindBy(id = "gh-logo")
     private WebElement homeButton;
 
-    @FindBy(xpath = "//android.widget.Button[@resource-id='gh-btn']")
+//    @FindBy(xpath = "//android.widget.Button[@resource-id='gh-btn']")
+    @FindBy(id = "gh-btn")
     private WebElement searchButton;
 
 //    @FindBy(xpath = "//android.widget.ListView[@resource-id='s0-1-0-50-1-2-4-17[0[0]]-0[0]-7-@match-media-0-@ebay-carousel-list']/android.view.View/android.view.View/android.view.View[1]")
@@ -53,8 +56,8 @@ public class HomePage extends HomePageBase {
     private List<WebElement> carouselItemName;
 
 //    @FindBy(xpath = "//android.view.View[@content-desc='Your shopping cart']")
-    @FindBy(className = "gh-cart-icon")
-    private WebElement emptyCart;
+    @FindBy(id = "icon--profile")
+    private WebElement profileIcon;
 
     private final WebDriverWait wait;
 
@@ -94,8 +97,8 @@ public class HomePage extends HomePageBase {
 
     public boolean isCartEmpty() {
         try {
-            wait.until(ExpectedConditions.visibilityOf(emptyCart));
-            return emptyCart.isDisplayed();
+            wait.until(ExpectedConditions.visibilityOf(profileIcon));
+            return profileIcon.isDisplayed();
         } catch (Exception e) {
             logger.error("Cart is not empty but should be ", e);
             return false;
@@ -118,7 +121,7 @@ public class HomePage extends HomePageBase {
         driver.get(WEB_URL);
         try {
             Thread.sleep(2000);
-            wait.until(ExpectedConditions.visibilityOf(emptyCart));
+            wait.until(ExpectedConditions.visibilityOf(profileIcon));
             logger.info("Landing Page has opened successfully");
         } catch (Exception e) {
             logger.error("Failed to open the landing page: ", e);
@@ -143,6 +146,7 @@ public class HomePage extends HomePageBase {
         logger.info("Attempting to search for the product: {}", search);
         searchBar.click();
         searchBar.sendKeys(search);
+//        searchBar.sendKeys(Keys.ENTER);
     }
 
     public void tapSearchButton() {

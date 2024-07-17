@@ -31,7 +31,7 @@ public class ApkBaseTest {
     public void setUp() {
         MobileDriverFactory driverFactory = new MobileDriverFactory();
         driverService = driverFactory.getDriverService();
-        driverService.startUpDriver(TestType.APK);
+        driverService.startUpDriver(TestType.APP);
         driver = driverService.getDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(APPIUM_DRIVER_TIMEOUT_IN_SECONDS));
         logger.info("Driver started successfully for platform: {}", System.getProperty("platform", ANDROID));

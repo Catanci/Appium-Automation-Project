@@ -37,7 +37,6 @@ public class WebBaseTest {
         logger.info("Driver started successfully for platform: {}", System.getProperty("platform", ANDROID));
     }
 
-
     protected void quitDriver() {
         if (driverService != null) {
             driverService.tearDownDriver();

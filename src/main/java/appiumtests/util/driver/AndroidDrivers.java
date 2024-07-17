@@ -1,7 +1,6 @@
 package appiumtests.util.driver;
 
 import appiumtests.constants.TestType;
-import appiumtests.gui.web.pages.android.SearchResultPage;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
@@ -9,12 +8,14 @@ import lombok.Getter;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.net.MalformedURLException;
 import java.net.URL;
-import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.Duration;
+import java.util.Set;
+
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 import static appiumtests.constants.DriverConstants.*;
 
@@ -38,12 +39,13 @@ public class AndroidDrivers implements MobileDriverService {
 
         if (testType == TestType.WEB) {
             logger.info("Setting up WEB test...");
-            options.setAppPackage(ANDROID_APP_PACKAGE);
-            options.setAppActivity(ANDROID_APP_ACTIVITY);
-            logger.debug("App Package: " + ANDROID_APP_PACKAGE);
-            logger.debug("App Activity: " + ANDROID_APP_ACTIVITY);
-        } else if (testType == TestType.APK) {
-            logger.info("Setting up APK test...");
+            options.setCapability("browserName", "Chrome");
+            options.setCapability("autoDownloadChromedriver", true);
+            options.setCapability("autoWebviewTimeout", 10000);
+            options.setCapability("nativeWebScreenshot", true);
+            options.setCapability("ensureWebviewsHavePages", true);
+        } else if (testType == TestType.APP) {
+            logger.info("Setting up APP test...");
             Path appPath = Paths.get(ANDROID_APP_APK_PATH).toAbsolutePath();
             options.setApp(String.valueOf(appPath));
             options.setNoReset(false);
@@ -54,15 +56,36 @@ public class AndroidDrivers implements MobileDriverService {
         }
 
         try {
-            logger.debug("Attempting to create AndroidDriver...");
+            logger.debug("Attempting to create AndroidDriver for web testing...");
             androidDriver = new AndroidDriver(new URL(APPIUM_URL), options);
-            logger.info("AndroidDriver created successfully");
+            logger.info("AndroidDriver created successfully for web testing");
+
+            switchToWebViewContext();
         } catch (Exception e) {
-            logger.debug("Error creating AndroidDriver: " + e.getMessage());
-            e.printStackTrace();
+            logger.error("Error creating AndroidDriver for web testing: " + e.getMessage(), e);
         }
 
         androidDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(APPIUM_DRIVER_TIMEOUT_IN_SECONDS));
+    }
+
+    private void switchToWebViewContext() {
+        try {
+            // Wait for contexts to be available
+            new WebDriverWait(androidDriver, Duration.ofSeconds(30))
+                    .until(driver -> ((AndroidDriver) driver).getContextHandles().size() > 1);
+
+            Set<String> contextNames = androidDriver.getContextHandles();
+            for (String contextName : contextNames) {
+                if (contextName.contains("CHROMIUM")) {
+                    androidDriver.context(contextName);
+                    logger.info("Switched to " + contextName + " context");
+                    return;
+                }
+            }
+            logger.warn("No WEBVIEW context found");
+        } catch (Exception e) {
+            logger.error("Failed to switch to WEBVIEW context", e);
+        }
     }
 
     @Override

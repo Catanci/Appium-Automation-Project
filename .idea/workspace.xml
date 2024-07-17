@@ -5,58 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="003b7aff-1607-493f-bcef-f373116bf11a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/constants/CommonConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/constants/CommonConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/constants/Direction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/constants/Direction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/constants/DriverConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/constants/DriverConstants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/constants/TestType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/constants/TestType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/components/ApkHeader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/components/ApkHeader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/components/ApkHeaderBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/components/ApkHeaderBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/android/ApkCartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/mobile/ApkCartPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/android/ApkCheckoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/mobile/ApkCheckoutPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/android/ApkHomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/mobile/ApkHomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/android/ApkLogInPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/mobile/ApkLogInPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/android/ApkProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/mobile/ApkProductPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/common/ApkCartPageBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/common/ApkCartPageBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/common/ApkCheckoutPageBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/common/ApkCheckoutPageBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/common/ApkHomePageBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/common/ApkHomePageBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/common/ApkLogInPageBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/common/ApkLogInPageBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/common/ApkProductPageBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/app/pages/common/ApkProductPageBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/components/Header.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/components/Header.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/components/HeaderBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/components/HeaderBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/android/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/android/CartPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/android/FiltersPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/android/FiltersPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/android/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/android/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/android/ProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/android/ProductPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/android/SearchResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/android/SearchResultPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/common/CartPageBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/common/CartPageBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/common/FiltersPageBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/common/FiltersPageBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/common/HomePageBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/common/HomePageBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/common/ProductPageBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/common/ProductPageBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/common/SearchResultPageBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/common/SearchResultPageBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/ios/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/ios/CartPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/ios/FiltersPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/ios/FiltersPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/ios/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/ios/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/ios/ProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/ios/ProductPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/ios/SearchResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/ios/SearchResultPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/util/driver/AndroidDrivers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/util/driver/AndroidDrivers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/util/driver/IOSDrivers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/util/driver/IOSDrivers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/mobiletest/ApkBaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobiletest/ApkBaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mobiletest/ApkHomePageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobiletest/ApkHomePageTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/mobiletest/WebBaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobiletest/WebBaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mobiletest/WebHomePageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobiletest/WebHomePageTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/device.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/device.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/regression-suite.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/regression-suite.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,10 +27,19 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2jHmsnbTAuCFNRiRxeGzDLZ61dk" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -77,17 +47,27 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "TestNG.ApkHomePageTest.verifySortingByPrice.executor": "Run",
     "TestNG.ApkHomePageTest.verifyUserCanAddProductToCart.executor": "Run",
     "TestNG.ApkHomePageTest.verifyUserCanPlaceAnOrder.executor": "Run",
+    "TestNG.WebHomePageTest.executor": "Run",
+    "TestNG.WebHomePageTest.testCarousel.executor": "Run",
     "TestNG.WebHomePageTest.testProductSearch.executor": "Run",
     "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/aleksanderbuda/Downloads/Appium-Automation-Project"
+    "last_opened_file_path": "C:/Users/budaa/Desktop/Solvd_Carina_Project-master"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.WebHomePageTest.testProductSearch">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\budaa\Desktop\project_java\Appium-Automation-Project\src\test\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.WebHomePageTest.testCarousel">
     <configuration name="ApkHomePageTest.verifySortingByPrice" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="mobile-appium-java" />
       <extension name="coverage">
@@ -124,7 +104,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApkHomePageTest.verifyUserCanPlaceAnOrder" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="WebHomePageTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="mobile-appium-java" />
       <extension name="coverage">
         <pattern>
@@ -133,8 +113,25 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="mobiletest" />
-      <option name="MAIN_CLASS_NAME" value="mobiletest.ApkHomePageTest" />
-      <option name="METHOD_NAME" value="verifyUserCanPlaceAnOrder" />
+      <option name="MAIN_CLASS_NAME" value="mobiletest.WebHomePageTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebHomePageTest.testCarousel" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="mobile-appium-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mobiletest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mobiletest" />
+      <option name="MAIN_CLASS_NAME" value="mobiletest.WebHomePageTest" />
+      <option name="METHOD_NAME" value="testCarousel" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -162,12 +159,20 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.WebHomePageTest.testCarousel" />
         <item itemvalue="TestNG.WebHomePageTest.testProductSearch" />
+        <item itemvalue="TestNG.WebHomePageTest" />
         <item itemvalue="TestNG.ApkHomePageTest.verifyUserCanAddProductToCart" />
         <item itemvalue="TestNG.ApkHomePageTest.verifySortingByPrice" />
-        <item itemvalue="TestNG.ApkHomePageTest.verifyUserCanPlaceAnOrder" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-22-openjdk-22-3183f394aec4-bad0321e" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -179,6 +184,17 @@
       <updated>1721052585725</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
