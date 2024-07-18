@@ -1,15 +1,14 @@
-package appiumtests.gui.web.pages.android;
+package appiumtests.gui.web.pages.platform;
 
 import appiumtests.gui.web.pages.common.FiltersPageBase;
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import lombok.Getter;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -19,18 +18,23 @@ import java.time.Duration;
 @Getter
 public class FiltersPage extends FiltersPageBase {
 
+    @iOSXCUITFindBy(accessibility = "Buy It Now")
     @AndroidFindBy(xpath = "//android.widget.Button[@text='Buy It Now']")
     private WebElement buyItNowFilter;
 
+    @iOSXCUITFindBy(accessibility = "Show More")
     @AndroidFindBy(xpath = "//android.widget.Button[@text='Show More']")
     private WebElement showMoreButton;
 
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeSwitch[@name='eBay Refurbished']")
     @AndroidFindBy(xpath = "//android.widget.ToggleButton[@resource-id='switch__LH_ItemCondition']")
     private WebElement eBayRefurbishedFilter;
 
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[@name=\"Filter, web dialogue\"]/XCUIElementTypeOther[2]/XCUIElementTypeButton")
     @AndroidFindBy(xpath = "//android.app.Dialog[@text='Filter']/android.view.View/android.view.View[3]/android.widget.Button")
     private WebElement showResultsButton;
 
+    @iOSXCUITFindBy(accessibility = "Filter")
     @AndroidFindBy(xpath = "//android.widget.TextView[@resource-id='filter__title filter__title--hub']")
     private WebElement title;
 

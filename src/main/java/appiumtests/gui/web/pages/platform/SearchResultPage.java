@@ -1,13 +1,16 @@
-package appiumtests.gui.web.pages.ios;
+package appiumtests.gui.web.pages.platform;
 
 import appiumtests.gui.web.pages.common.SearchResultPageBase;
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import lombok.Getter;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
+
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -19,16 +22,20 @@ import java.util.stream.Collectors;
 @Getter
 public class SearchResultPage extends SearchResultPageBase {
 
-    @FindBy(xpath = "//android.view.View[@content-desc]/android.view.View[1]")
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[@name='content-desc']/XCUIElementTypeOther[4]/XCUIElementTypeOther")
+    @AndroidFindBy(xpath = "//android.view.View[@content-desc]/android.view.View[1]")
     private List<WebElement> searchResultsList;
 
-    @FindBy(xpath = "//android.view.View[@resource-id=\"mainContent\"]/android.view.View[1]/android.view.View/android.widget.TextView[@text]")
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[@name='mainContent']/XCUIElementTypeOther[4]/XCUIElementTypeOther/XCUIElementTypeStaticText")
+    @AndroidFindBy(xpath = "//android.view.View[@resource-id='mainContent']/android.view.View[1]/android.view.View/android.widget.TextView[@text]")
     private WebElement searchResultCount;
 
-    @FindBy(xpath = "//android.view.View[@resource-id='mainContent']/android.view.View[1]/android.view.View")
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name='Show 160,000+ results']")
+    @AndroidFindBy(xpath = "//android.view.View[@resource-id='mainContent']/android.view.View[1]/android.view.View")
     private WebElement bottomResultsCount;
 
-    @FindBy(xpath = "//android.widget.Button[@text='Filter']")
+    @iOSXCUITFindBy(accessibility = "Filter" )
+    @AndroidFindBy(xpath = "//android.widget.Button[@text='Filter']")
     private WebElement filter;
 
     private final Logger logger = LogManager.getLogger(SearchResultPage.class);
@@ -43,7 +50,7 @@ public class SearchResultPage extends SearchResultPageBase {
     public List<String> getVisibleResults() {
         logger.info("Number of elements found: " + searchResultsList.size());
         return searchResultsList.stream()
-                .peek(element -> logger.info("Found elements... " + element.getSize()))
+                .peek(element -> logger.info("Found elements... {}", element.getSize()))
                 .map(WebElement::getText)
                 .collect(Collectors.toList());
     }

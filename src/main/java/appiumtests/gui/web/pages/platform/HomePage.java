@@ -1,17 +1,13 @@
-package appiumtests.gui.web.pages.android;
+package appiumtests.gui.web.pages.platform;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import lombok.Getter;
-import net.bytebuddy.asm.Advice;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -24,40 +20,39 @@ import java.util.stream.Collectors;
 @Getter
 public class HomePage extends HomePageBase {
 
-//    @AndroidFindBy(xpath = "//android.widget.EditText[@resource-id='gh-ac']")
-    @FindBy(id = "kw")
+    @iOSXCUITFindBy(accessibility = "Search eBay")
+    @AndroidFindBy(xpath = "//android.widget.EditText[@resource-id='gh-ac']")
     private WebElement searchBar;
 
-//    @AndroidFindBy(xpath = "//android.view.View[@content-desc='eBay Home']")
-    @FindBy(id = "gh-logo")
+    @iOSXCUITFindBy(accessibility = "Search")
+    @AndroidFindBy(xpath = "//android.view.View[@content-desc='eBay Home']")
     private WebElement homeButton;
 
-//    @FindBy(xpath = "//android.widget.Button[@resource-id='gh-btn']")
-    @FindBy(id = "gh-btn")
+    @iOSXCUITFindBy(accessibility = "Search" )
+    @AndroidFindBy(xpath = "//android.widget.Button[@resource-id='gh-btn']")
     private WebElement searchButton;
 
-//    @FindBy(xpath = "//android.widget.ListView[@resource-id='s0-1-0-50-1-2-4-17[0[0]]-0[0]-7-@match-media-0-@ebay-carousel-list']/android.view.View/android.view.View/android.view.View[1]")
-    @FindBy(id = "s0-1-0-50-1-2-4-17[0[0]]-0[3]-7-@match-media-0-@ebay-carousel-container")
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[@name=\"main\"]/XCUIElementTypeOther[4]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeLink/XCUIElementTypeLink[1]")
+    @AndroidFindBy(xpath = "//android.widget.ListView[@resource-id='s0-1-0-50-1-2-4-17[0[0]]-0[0]-7-@match-media-0-@ebay-carousel-list']/android.view.View/android.view.View/android.view.View[1]")
     private List<WebElement> carouselItems;
 
-//    @FindBy(xpath = "//android.view.View[@resource-id]/android.widget.Button[@text][1]")
-    @FindBy(xpath = "//button[@class='carousel__control carousel__control--prev']")
+    @AndroidFindBy(xpath = "//android.view.View[@resource-id]/android.widget.Button[@text][1]")
     private WebElement swipeLeft;
 
-//    @FindBy(xpath = "//android.view.View[@resource-id]/android.widget.Button[@text][2]")
-    @FindBy(id = "s0-1-0-50-1-2-4-17[0[0]]-0[3]-7-@match-media-0-@ebay-carousel-next")
+    @AndroidFindBy(xpath = "//android.view.View[@resource-id]/android.widget.Button[@text][2]")
     private WebElement swipeRight;
 
-    @FindBy(xpath = "//h2[@class='vl-card-header__headline']")
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Your Recently Viewed Items\"]")
+    @AndroidFindBy(xpath = "//h2[@class='vl-card-header__headline']")
     private WebElement recentlyViewedItemsBanner;
 
-//    @FindBy(xpath = "//android.widget.ListView[@resource-id='s0-1-0-50-1-2-4-17[0[0]]-0[0]-7-@match-media-0-@ebay-carousel-list']//android.widget.TextView[@text][1]")
-    @FindBy(xpath = "//h3[contains(@class,'vlp-merch-item-title vlp-merch-item-title-dweb')]")
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[@name=\"main\"]/XCUIElementTypeOther[4]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeLink/XCUIElementTypeLink[2]/XCUIElementTypeStaticText")
+    @AndroidFindBy(xpath = "//android.widget.ListView[@resource-id='s0-1-0-50-1-2-4-17[0[0]]-0[0]-7-@match-media-0-@ebay-carousel-list']//android.widget.TextView[@text][1]")
     private List<WebElement> carouselItemName;
 
-//    @FindBy(xpath = "//android.view.View[@content-desc='Your shopping cart']")
-    @FindBy(id = "icon--profile")
-    private WebElement profileIcon;
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeLink[@name=\"Your shopping cart is empty\"]")
+    @AndroidFindBy(xpath = "//android.view.View[@content-desc='Your shopping cart']")
+    private WebElement cartIcon;
 
     private final WebDriverWait wait;
 
@@ -97,8 +92,8 @@ public class HomePage extends HomePageBase {
 
     public boolean isCartEmpty() {
         try {
-            wait.until(ExpectedConditions.visibilityOf(profileIcon));
-            return profileIcon.isDisplayed();
+            wait.until(ExpectedConditions.visibilityOf(cartIcon));
+            return cartIcon.isDisplayed();
         } catch (Exception e) {
             logger.error("Cart is not empty but should be ", e);
             return false;
@@ -121,7 +116,7 @@ public class HomePage extends HomePageBase {
         driver.get(WEB_URL);
         try {
             Thread.sleep(2000);
-            wait.until(ExpectedConditions.visibilityOf(profileIcon));
+            wait.until(ExpectedConditions.visibilityOf(homeButton));
             logger.info("Landing Page has opened successfully");
         } catch (Exception e) {
             logger.error("Failed to open the landing page: ", e);
@@ -146,7 +141,6 @@ public class HomePage extends HomePageBase {
         logger.info("Attempting to search for the product: {}", search);
         searchBar.click();
         searchBar.sendKeys(search);
-//        searchBar.sendKeys(Keys.ENTER);
     }
 
     public void tapSearchButton() {

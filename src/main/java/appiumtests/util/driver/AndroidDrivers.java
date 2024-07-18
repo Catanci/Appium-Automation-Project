@@ -39,11 +39,11 @@ public class AndroidDrivers implements MobileDriverService {
 
         if (testType == TestType.WEB) {
             logger.info("Setting up WEB test...");
-            options.setCapability("browserName", "Chrome");
-            options.setCapability("autoDownloadChromedriver", true);
-            options.setCapability("autoWebviewTimeout", 10000);
-            options.setCapability("nativeWebScreenshot", true);
-            options.setCapability("ensureWebviewsHavePages", true);
+//            options.setCapability("browserName", "Chrome");
+//            options.setCapability("autoDownloadChromedriver", true);
+//            options.setCapability("autoWebviewTimeout", 10000);
+//            options.setCapability("nativeWebScreenshot", true);
+//            options.setCapability("ensureWebviewsHavePages", true);
         } else if (testType == TestType.APP) {
             logger.info("Setting up APP test...");
             Path appPath = Paths.get(ANDROID_APP_APK_PATH).toAbsolutePath();
@@ -60,7 +60,7 @@ public class AndroidDrivers implements MobileDriverService {
             androidDriver = new AndroidDriver(new URL(APPIUM_URL), options);
             logger.info("AndroidDriver created successfully for web testing");
 
-            switchToWebViewContext();
+//            switchToWebViewContext();
         } catch (Exception e) {
             logger.error("Error creating AndroidDriver for web testing: " + e.getMessage(), e);
         }
@@ -68,25 +68,25 @@ public class AndroidDrivers implements MobileDriverService {
         androidDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(APPIUM_DRIVER_TIMEOUT_IN_SECONDS));
     }
 
-    private void switchToWebViewContext() {
-        try {
-            // Wait for contexts to be available
-            new WebDriverWait(androidDriver, Duration.ofSeconds(30))
-                    .until(driver -> ((AndroidDriver) driver).getContextHandles().size() > 1);
-
-            Set<String> contextNames = androidDriver.getContextHandles();
-            for (String contextName : contextNames) {
-                if (contextName.contains("CHROMIUM")) {
-                    androidDriver.context(contextName);
-                    logger.info("Switched to " + contextName + " context");
-                    return;
-                }
-            }
-            logger.warn("No WEBVIEW context found");
-        } catch (Exception e) {
-            logger.error("Failed to switch to WEBVIEW context", e);
-        }
-    }
+//    private void switchToWebViewContext() {
+//        try {
+//            // Wait for contexts to be available
+//            new WebDriverWait(androidDriver, Duration.ofSeconds(30))
+//                    .until(driver -> ((AndroidDriver) driver).getContextHandles().size() > 1);
+//
+//            Set<String> contextNames = androidDriver.getContextHandles();
+//            for (String contextName : contextNames) {
+//                if (contextName.contains("CHROMIUM")) {
+//                    androidDriver.context(contextName);
+//                    logger.info("Switched to " + contextName + " context");
+//                    return;
+//                }
+//            }
+//            logger.warn("No WEBVIEW context found");
+//        } catch (Exception e) {
+//            logger.error("Failed to switch to WEBVIEW context", e);
+//        }
+//    }
 
     @Override
     public void tearDownDriver() {

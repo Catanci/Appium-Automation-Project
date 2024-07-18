@@ -25,7 +25,7 @@ import static io.appium.java_client.remote.MobilePlatform.ANDROID;
 public class WebBaseTest {
     protected MobileDriverService driverService;
     protected AppiumDriver driver;
-    private final Logger logger = LogManager.getLogger(ApkBaseTest.class);
+    private final Logger logger = LogManager.getLogger(WebBaseTest.class);
 
     @BeforeMethod
     public void setUp() {
@@ -90,8 +90,6 @@ public class WebBaseTest {
         swipe.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
         logger.debug("Executing swipe action");
         driver.perform(List.of(swipe));
-//        driver.perform(Arrays.asList(swipe));
-
     }
 
     public void pause(Number timeout) {
@@ -107,6 +105,4 @@ public class WebBaseTest {
 
         logger.debug("Pause is over. Keep going..");
     }
-
-
 }

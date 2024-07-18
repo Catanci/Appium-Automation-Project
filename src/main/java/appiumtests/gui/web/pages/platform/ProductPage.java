@@ -1,13 +1,14 @@
-package appiumtests.gui.web.pages.ios;
+package appiumtests.gui.web.pages.platform;
 
 import appiumtests.gui.web.pages.common.ProductPageBase;
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import lombok.Getter;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -17,35 +18,43 @@ import java.time.Duration;
 @Getter
 public class ProductPage extends ProductPageBase {
 
-    @FindBy(xpath = "//android.widget.TextView[@text='Back to search results']")
+    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeOther[@name=\"main\"])[2]/XCUIElementTypeButton[3]")
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Back to search results']")
     private WebElement backToResultsText;
 
-    @FindBy(xpath = "//android.view.View[@content-desc=\"eBay Home\"]")
+    @iOSXCUITFindBy(accessibility = "eBay Home")
+    @AndroidFindBy(xpath = "//android.view.View[@content-desc=\"eBay Home\"]")
     private WebElement logoHomeButton;
 
-    @FindBy(xpath = "(//android.view.View[@resource-id='RightSummaryPanel']//android.view.View[@resource-id='mainContent']/android.view.View/android.widget.TextView[@text])[1]")
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[@value=1]/XCUIElementTypeStaticText")
+    @AndroidFindBy(xpath = "(//android.view.View[@resource-id='RightSummaryPanel']//android.view.View[@resource-id='mainContent']/android.view.View/android.widget.TextView[@text])[1]")
     private WebElement productName;
 
-    @FindBy(xpath = "//android.view.View[@resource-id='mainContent']/android.widget.TextView[@text][1]")
+    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeOther[@name=\"main\"])[2]/XCUIElementTypeOther[15]/XCUIElementTypeOther[1]/XCUIElementTypeStaticText")
+    @AndroidFindBy(xpath = "//android.view.View[@resource-id='mainContent']/android.widget.TextView[@text][1]")
     private WebElement productPrice;
 
-    @FindBy(xpath = "//android.view.View[@content-desc='Buy It Now']")
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Buy It Now\"]")
+    @AndroidFindBy(xpath = "//android.view.View[@content-desc='Buy It Now']")
     private WebElement buyItNowButton;
 
-    @FindBy(xpath = "//android.view.View[@resource-id='mainContent']/android.widget.TextView[@text][3]")
+    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeOther[@name=\"main\"])[2]/XCUIElementTypeStaticText[@name][2]")
+    @AndroidFindBy(xpath = "//android.view.View[@resource-id='mainContent']/android.widget.TextView[@text][3]")
     private WebElement conditionText;
 
-    @FindBy(xpath = "//android.view.View[@content-desc='Add to cart']")
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"View in cart\"]")
+    @AndroidFindBy(xpath = "//android.view.View[@content-desc='Add to cart']")
     private WebElement viewCartButton;
 
     //Cart Overlay
-    @FindBy(xpath = "//android.app.Dialog[@text='1 item added to cart']/android.view.View/android.view.View[2]/android.widget.TextView[@text][2]")
+    @AndroidFindBy(xpath = "//android.app.Dialog[@text='1 item added to cart']/android.view.View/android.view.View[2]/android.widget.TextView[@text][2]")
     private WebElement cartOverlayProductName;
 
-    @FindBy(xpath = "//android.app.Dialog[@text='1 item added to cart']/android.view.View/android.view.View[2]/android.view.View[2]/android.widget.TextView[@text]")
+    @AndroidFindBy(xpath = "//android.app.Dialog[@text='1 item added to cart']/android.view.View/android.view.View[2]/android.view.View[2]/android.widget.TextView[@text]")
     private WebElement cartOverlayProductPrice;
 
-    @FindBy(xpath = "//android.widget.Button[@text='Close the show me how overlay']")
+    @iOSXCUITFindBy(accessibility = "Close the show me how overlay")
+    @AndroidFindBy(xpath = "//android.widget.Button[@text='Close the show me how overlay']")
     private WebElement closeButton;
 
     private final Logger logger = LogManager.getLogger(ProductPage.class);

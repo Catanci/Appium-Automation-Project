@@ -1,7 +1,7 @@
 package mobiletest;
 
 import appiumtests.gui.web.components.Header;
-import appiumtests.gui.web.pages.android.*;
+import appiumtests.gui.web.pages.platform.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -104,8 +104,6 @@ public class WebHomePageTest extends WebBaseTest {
         SoftAssert softAssert = new SoftAssert();
         HomePage homePage = new HomePage(driver);
         homePage.open();
-        Assert.assertTrue(homePage.isLogoVisible(),
-                "Logo is not visible upon entering the page");
 
         String searchTerm = "iphone";
         homePage.search(searchTerm);

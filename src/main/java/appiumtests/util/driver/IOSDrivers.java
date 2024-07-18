@@ -10,6 +10,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.net.URL;
 import java.time.Duration;
+import java.util.Set;
 
 import static appiumtests.constants.DriverConstants.*;
 
@@ -27,14 +28,12 @@ public class IOSDrivers implements MobileDriverService {
         options.setPlatformName(IOS_PLATFORM_NAME);
         options.setPlatformVersion(IOS_PLATFORM_VERSION);
         options.setAutomationName(IOS_AUTOMATION_NAME);
-        options.setNoReset(true);
+        options.setNoReset(false);
         options.setCapability("autoAcceptAlerts", true);
 
         if (testType == TestType.WEB) {
             logger.info("Setting up WEB test...");
             options.setCapability("browserName", IOS_BROWSER_NAME);
-            options.setCapability("startIWDP", true);
-
         } else if (testType == TestType.APP) {
             logger.info("Setting up APP test...");
             options.setNoReset(false);
@@ -45,29 +44,27 @@ public class IOSDrivers implements MobileDriverService {
             logger.debug("Attempting to create IOSDriver...");
             iosDriver = new IOSDriver(new URL(APPIUM_URL), options);
             logger.info("IOSDriver created successfully");
-
-            // Switch to webview context if it's a WEB test
-//            if (testType == TestType.WEB) {
-//                switchToWebViewContext();
-//            }
+            if (testType == TestType.WEB) {
+                switchToNativeContext();
+            }
         } catch (Exception e) {
-            logger.error("Error creating IOSDriver: " + e.getMessage());
+            logger.error("Error creating IOSDriver: {}", e.getMessage());
             e.printStackTrace();
         }
 
         iosDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(APPIUM_DRIVER_TIMEOUT_IN_SECONDS));
     }
 
-//    private void switchToWebViewContext() {
-//        Set<String> contextHandles = iosDriver.getContextHandles();
-//        for (String contextHandle : contextHandles) {
-//            if (contextHandle.contains("WEBVIEW")) {
-//                iosDriver.context(contextHandle);
-//                logger.info("Switched to WEBVIEW context");
-//                break;
-//            }
-//        }
-//    }
+    private void switchToNativeContext() {
+        Set<String> contextHandles = iosDriver.getContextHandles();
+        for (String contextHandle : contextHandles) {
+            if (contextHandle.startsWith("NATIVE")) {
+                iosDriver.context(contextHandle);
+                logger.info("Switched to native context: {}", contextHandle);
+                break;
+            }
+        }
+    }
 
     @Override
     public void tearDownDriver() {
@@ -75,6 +72,7 @@ public class IOSDrivers implements MobileDriverService {
             iosDriver.quit();
         }
     }
+
     public AppiumDriver getDriver() {
         return iosDriver;
     }

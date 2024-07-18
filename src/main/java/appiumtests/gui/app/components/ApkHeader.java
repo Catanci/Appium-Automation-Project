@@ -1,7 +1,7 @@
 package appiumtests.gui.app.components;
 
 import appiumtests.gui.web.components.Header;
-import appiumtests.gui.web.pages.android.SearchResultPage;
+import appiumtests.gui.web.pages.platform.SearchResultPage;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
