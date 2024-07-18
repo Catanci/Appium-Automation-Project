@@ -58,22 +58,55 @@ ____
 #### Create a New Freestyle Job:
 1. **New Job**: Navigate to Jenkins dashboard and click "New Item".
 2. **Name and Type**: Provide a name for your job and select "Freestyle" as the job type.
-3. **Freestyle Configuration**:
-    * **Repository URL**: Set to your Git repository URL.
-    * **Branches to build**: */master
-    * **Build Steps**: Add separate build steps for Android and iOS:
-      ```
-      Invoke top-level maven targets
-      
-      # For Android
-      test -Dplatform=android
- 
-      # For iOS
-      test -Dplatform=ios
-      ```
+3. **Configure Build Steps(an example for Android)**:
+   - Scroll to the "Build" section
+   - Add the following build steps in order:
 
-4. **Node Selection**: Ensure the Jenkins job runs on a node with necessary mobile testing capabilities.
+   a. **Start Appium Server**:
+   - Click "Add build step" and select "Execute shell"
+   - Enter the following command:
+     ```
+     appium &
+     sleep 10  # Give Appium time to start
+     ```
+
+   b. **Start Emulator** (for Android):
+   - Click "Add build step" and select "Execute shell"
+   - Enter the following command:
+     ```
+     cd %ANDROID_HOME%\emulator || echo "Failed to change directory"
+     start /b emulator -avd phoneName || echo "Failed to start emulator"
+     timeout 60
+     adb shell getprop sys.boot_completed || echo "Failed to check boot completion"
+     adb wait-for-device || echo "ADB wait-for-device failed"
+     ```
+   Replace "YourEmulatorName" with your actual emulator name
+
+   c. **Run Tests**:
+   - Click "Add build step" and select "Invoke top-level Maven targets"
+   - Add the following Maven goals:
+
+     For Android:
+     ```
+     test -Dplatform=android
+     ```
+
+     For iOS:
+     ```
+     test -Dplatform=ios
+     ```
+
+   d. **Stop Emulator and Appium** (Post-build step):
+   - Click "Add build step" and select "Execute Windows batch command"
+   - Enter the following commands:
+     ```
+     taskkill /F /IM node.exe
+     taskkill /F /IM emulator.exe
+     taskkill /F /IM qemu-system-x86_64.exe
+     ```
+
+4. **Node Selection**: Ensure the Jenkins job runs on a correct node.
 
 #### Run Your Freestyle Job
 
-### Project Structure
+Good luck! 
