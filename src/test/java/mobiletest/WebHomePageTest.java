@@ -58,7 +58,9 @@ public class WebHomePageTest extends WebBaseTest {
         Assert.assertTrue(productPage.isPageOpened(),
                 "After opening the product page, user has been redirected to a different page");
         pause(2);
+        swipeScreen(Direction.UP);
         String firstProduct = productPage.getProductName();
+        swipeScreen(Direction.DOWN);
         productPage.tapBackButton();
         softAssert.assertFalse(searchResultPage.getVisibleResults().isEmpty(),
                 "Search results should not be empty");
@@ -67,8 +69,10 @@ public class WebHomePageTest extends WebBaseTest {
         softAssert.assertTrue(productPage.isPageOpened(),
                 "After opening the product page, user has been redirected to the different page");
         pause(2);
-        String secondProduct = productPage.getProductName();
 
+        swipeScreen(Direction.UP);
+        String secondProduct = productPage.getProductName();
+        swipeScreen(Direction.DOWN);
         productPage.tapBackButton();
         softAssert.assertFalse(searchResultPage.getVisibleResults().isEmpty(),
                 "Search results should not be empty");
@@ -78,8 +82,10 @@ public class WebHomePageTest extends WebBaseTest {
         softAssert.assertTrue(productPage.isPageOpened(),
                 "After opening the result page, user has been redirected to the different page");
         pause(2);
-        String thirdProduct = productPage.getProductName();
 
+        swipeScreen(Direction.UP);
+        String thirdProduct = productPage.getProductName();
+        swipeScreen(Direction.DOWN);
         productPage.tapHomeButton();
         softAssert.assertTrue(homePage.isBannerVisible(),
                 "After clicking home button user has been redirected  to different page");
@@ -125,7 +131,7 @@ public class WebHomePageTest extends WebBaseTest {
         swipeScreen(Direction.UP);
         filtersPage.tapShowResults();
 
-        softAssert.assertTrue(searchResultPage.isBottomResultCountVisible(),
+        softAssert.assertTrue(searchResultPage.isSortButtonVisible(),
                 "There are not any results");
         searchResultPage.tapResultByIndex(1);
 

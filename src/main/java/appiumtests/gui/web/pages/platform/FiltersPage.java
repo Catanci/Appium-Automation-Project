@@ -30,7 +30,7 @@ public class FiltersPage extends FiltersPageBase {
     @AndroidFindBy(xpath = "//android.widget.ToggleButton[@resource-id='switch__LH_ItemCondition']")
     private WebElement eBayRefurbishedFilter;
 
-    @iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[@name=\"Filter, web dialogue\"]/XCUIElementTypeOther[2]/XCUIElementTypeButton")
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[@name='Filter, web dialogue']/XCUIElementTypeOther[2]/XCUIElementTypeButton")
     @AndroidFindBy(xpath = "//android.app.Dialog[@text='Filter']/android.view.View/android.view.View[3]/android.widget.Button")
     private WebElement showResultsButton;
 

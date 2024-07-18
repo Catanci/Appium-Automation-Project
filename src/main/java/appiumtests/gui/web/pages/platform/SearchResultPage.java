@@ -30,9 +30,9 @@ public class SearchResultPage extends SearchResultPageBase {
     @AndroidFindBy(xpath = "//android.view.View[@resource-id='mainContent']/android.view.View[1]/android.view.View/android.widget.TextView[@text]")
     private WebElement searchResultCount;
 
-    @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name='Show 160,000+ results']")
-    @AndroidFindBy(xpath = "//android.view.View[@resource-id='mainContent']/android.view.View[1]/android.view.View")
-    private WebElement bottomResultsCount;
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name='Sort']")
+    @AndroidFindBy(xpath = "//android.widget.Button[@text='Sort']")
+    private WebElement sortButton;
 
     @iOSXCUITFindBy(accessibility = "Filter" )
     @AndroidFindBy(xpath = "//android.widget.Button[@text='Filter']")
@@ -75,19 +75,19 @@ public class SearchResultPage extends SearchResultPageBase {
     public boolean isPageOpened() {
         try {
             Thread.sleep(1000);
-            wait.until(ExpectedConditions.visibilityOf(searchResultCount));
-            return searchResultCount.isDisplayed();
+            wait.until(ExpectedConditions.visibilityOf(sortButton));
+            return sortButton.isDisplayed();
         } catch (Exception e) {
             logger.error("Page is not opened: ", e);
             return false;
         }
     }
 
-    public boolean isBottomResultCountVisible() {
+    public boolean isSortButtonVisible() {
         try {
             Thread.sleep(1000);
-            wait.until(ExpectedConditions.visibilityOf(bottomResultsCount));
-            return bottomResultsCount.isDisplayed();
+            wait.until(ExpectedConditions.visibilityOf(sortButton));
+            return sortButton.isDisplayed();
         } catch (Exception e) {
             logger.error("Page is not opened: ", e);
             return false;

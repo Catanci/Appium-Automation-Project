@@ -1,7 +1,6 @@
 package appiumtests.gui.web.pages.common;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.support.PageFactory;
 
@@ -22,7 +21,7 @@ public abstract class SearchResultPageBase {
 
     public abstract boolean isPageOpened();
 
-    public abstract boolean isBottomResultCountVisible();
+    public abstract boolean isSortButtonVisible();
 
 
 

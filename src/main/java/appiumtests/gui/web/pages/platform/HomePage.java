@@ -21,7 +21,7 @@ import java.util.stream.Collectors;
 public class HomePage extends HomePageBase {
 
     @iOSXCUITFindBy(accessibility = "Search eBay")
-    @AndroidFindBy(xpath = "//android.widget.EditText[@resource-id='gh-ac']")
+    @AndroidFindBy(uiAutomator = "new UiSelector().className('android.widget.EditText').instance(0)")
     private WebElement searchBar;
 
     @iOSXCUITFindBy(accessibility = "Search")
@@ -29,10 +29,10 @@ public class HomePage extends HomePageBase {
     private WebElement homeButton;
 
     @iOSXCUITFindBy(accessibility = "Search" )
-    @AndroidFindBy(xpath = "//android.widget.Button[@resource-id='gh-btn']")
+    @AndroidFindBy(xpath = "//android.widget.Button[@text='Search']")
     private WebElement searchButton;
 
-    @iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[@name=\"main\"]/XCUIElementTypeOther[4]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeLink/XCUIElementTypeLink[1]")
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[@name='main']/XCUIElementTypeOther[4]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeLink/XCUIElementTypeLink[1]")
     @AndroidFindBy(xpath = "//android.widget.ListView[@resource-id='s0-1-0-50-1-2-4-17[0[0]]-0[0]-7-@match-media-0-@ebay-carousel-list']/android.view.View/android.view.View/android.view.View[1]")
     private List<WebElement> carouselItems;
 
@@ -42,15 +42,15 @@ public class HomePage extends HomePageBase {
     @AndroidFindBy(xpath = "//android.view.View[@resource-id]/android.widget.Button[@text][2]")
     private WebElement swipeRight;
 
-    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Your Recently Viewed Items\"]")
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name='Your Recently Viewed Items']")
     @AndroidFindBy(xpath = "//h2[@class='vl-card-header__headline']")
     private WebElement recentlyViewedItemsBanner;
 
-    @iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[@name=\"main\"]/XCUIElementTypeOther[4]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeLink/XCUIElementTypeLink[2]/XCUIElementTypeStaticText")
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[@name='main']/XCUIElementTypeOther[4]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeLink/XCUIElementTypeLink[2]/XCUIElementTypeStaticText")
     @AndroidFindBy(xpath = "//android.widget.ListView[@resource-id='s0-1-0-50-1-2-4-17[0[0]]-0[0]-7-@match-media-0-@ebay-carousel-list']//android.widget.TextView[@text][1]")
     private List<WebElement> carouselItemName;
 
-    @iOSXCUITFindBy(xpath = "//XCUIElementTypeLink[@name=\"Your shopping cart is empty\"]")
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeLink[@name='Your shopping cart is empty']")
     @AndroidFindBy(xpath = "//android.view.View[@content-desc='Your shopping cart']")
     private WebElement cartIcon;
 

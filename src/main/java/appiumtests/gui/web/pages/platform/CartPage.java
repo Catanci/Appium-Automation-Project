@@ -19,14 +19,14 @@ import java.time.Duration;
 public class CartPage extends CartPageBase {
 
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[@value=1]/XCUIElementTypeStaticText")
-    @AndroidFindBy(xpath = "//android.view.View[@resource-id=\"mainContent\"]/android.view.View[2]/android.view.View/android.widget.ListView/android.view.View/android.view.View/android.view.View[@text][2]")
+    @AndroidFindBy(xpath = "//android.view.View[@resource-id='mainContent']/android.view.View[2]/android.view.View/android.widget.ListView/android.view.View/android.view.View/android.view.View[@text][2]")
     private WebElement cartItemName;
 
-    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeOther[@name=\"main\"])[2]/XCUIElementTypeOther[15]/XCUIElementTypeOther[1]/XCUIElementTypeStaticText")
-    @AndroidFindBy(xpath = "//android.view.View[@resource-id=\"mainContent\"]/android.view.View[3]/android.view.View/android.widget.ListView/android.view.View/android.view.View/android.widget.TextView[@text][2]")
+    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeOther[@name='main'])[2]/XCUIElementTypeOther[15]/XCUIElementTypeOther[1]/XCUIElementTypeStaticText")
+    @AndroidFindBy(xpath = "//android.view.View[@resource-id='mainContent']/android.view.View[3]/android.view.View/android.widget.ListView/android.view.View/android.view.View/android.widget.TextView[@text][2]")
     private WebElement cartItemPrice;
 
-    @iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[@name=\"main\"]/XCUIElementTypeOther[6]/XCUIElementTypeOther[2]/XCUIElementTypeOther[1]/XCUIElementTypeButton[@name][2]")
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[@name='main']/XCUIElementTypeOther[6]/XCUIElementTypeOther[2]/XCUIElementTypeOther[1]/XCUIElementTypeButton[@name][2]")
     @AndroidFindBy(xpath = "//android.widget.Button[@text][2]")
     private WebElement remove;
 

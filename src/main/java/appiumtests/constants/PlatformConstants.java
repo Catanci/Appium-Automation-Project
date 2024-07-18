@@ -5,7 +5,7 @@ import org.apache.logging.log4j.Logger;
 
 import static appiumtests.constants.DriverConstants.ANDROID;
 
-public class CommonConstants {
+public class PlatformConstants {
     private final static Logger logger = LogManager.getLogger();
     public static final String MOBILE_PLATFORM_NAME = getPlatformName();
 

@@ -14,9 +14,6 @@ import java.nio.file.Paths;
 import java.time.Duration;
 import java.util.Set;
 
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-
 import static appiumtests.constants.DriverConstants.*;
 
 @Getter
@@ -39,11 +36,7 @@ public class AndroidDrivers implements MobileDriverService {
 
         if (testType == TestType.WEB) {
             logger.info("Setting up WEB test...");
-//            options.setCapability("browserName", "Chrome");
-//            options.setCapability("autoDownloadChromedriver", true);
-//            options.setCapability("autoWebviewTimeout", 10000);
-//            options.setCapability("nativeWebScreenshot", true);
-//            options.setCapability("ensureWebviewsHavePages", true);
+            options.setCapability("browserName", ANDROID_BROWSER_NAME);
         } else if (testType == TestType.APP) {
             logger.info("Setting up APP test...");
             Path appPath = Paths.get(ANDROID_APP_APK_PATH).toAbsolutePath();
@@ -54,13 +47,13 @@ public class AndroidDrivers implements MobileDriverService {
             logger.debug("App Package: " + ANDROID_APP_APK_PACKAGE);
             logger.debug("App Activity: " + ANDROID_APP_APK_ACTIVITY);
         }
-
         try {
-            logger.debug("Attempting to create AndroidDriver for web testing...");
+            logger.debug("Attempting to create AndroidDriver...");
             androidDriver = new AndroidDriver(new URL(APPIUM_URL), options);
-            logger.info("AndroidDriver created successfully for web testing");
-
-//            switchToWebViewContext();
+            logger.info("AndroidDriver created successfully");
+            if(testType == TestType.WEB) {
+                switchToNativeContext();
+            }
         } catch (Exception e) {
             logger.error("Error creating AndroidDriver for web testing: " + e.getMessage(), e);
         }
@@ -68,25 +61,16 @@ public class AndroidDrivers implements MobileDriverService {
         androidDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(APPIUM_DRIVER_TIMEOUT_IN_SECONDS));
     }
 
-//    private void switchToWebViewContext() {
-//        try {
-//            // Wait for contexts to be available
-//            new WebDriverWait(androidDriver, Duration.ofSeconds(30))
-//                    .until(driver -> ((AndroidDriver) driver).getContextHandles().size() > 1);
-//
-//            Set<String> contextNames = androidDriver.getContextHandles();
-//            for (String contextName : contextNames) {
-//                if (contextName.contains("CHROMIUM")) {
-//                    androidDriver.context(contextName);
-//                    logger.info("Switched to " + contextName + " context");
-//                    return;
-//                }
-//            }
-//            logger.warn("No WEBVIEW context found");
-//        } catch (Exception e) {
-//            logger.error("Failed to switch to WEBVIEW context", e);
-//        }
-//    }
+    private void switchToNativeContext() {
+        Set<String> contextHandles = androidDriver.getContextHandles();
+        for (String contextHandle : contextHandles) {
+            if (contextHandle.startsWith("NATIVE")) {
+                androidDriver.context(contextHandle);
+                logger.info("Switched to native context: {}", contextHandle);
+                break;
+            }
+        }
+    }
 
     @Override
     public void tearDownDriver() {

@@ -96,10 +96,10 @@ public class WebBaseTest {
         logger.debug("Will wait for {} seconds", timeout);
 
         try {
-            Float timeoutFloat = timeout.floatValue() * 1000.0F;
-            long timeoutLong = timeoutFloat.longValue();
-            Thread.sleep(timeoutLong);
-        } catch (InterruptedException var4) {
+            long timeoutMillis = (long) (timeout.floatValue() * 1000);
+            Thread.sleep(timeoutMillis);
+        } catch (InterruptedException e) {
+            logger.warn("Sleep interrupted", e);
             Thread.currentThread().interrupt();
         }
 

@@ -18,31 +18,31 @@ import java.time.Duration;
 @Getter
 public class ProductPage extends ProductPageBase {
 
-    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeOther[@name=\"main\"])[2]/XCUIElementTypeButton[3]")
+    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeOther[@name='main'])[2]/XCUIElementTypeButton[3]")
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='Back to search results']")
     private WebElement backToResultsText;
 
     @iOSXCUITFindBy(accessibility = "eBay Home")
-    @AndroidFindBy(xpath = "//android.view.View[@content-desc=\"eBay Home\"]")
+    @AndroidFindBy(xpath = "//android.view.View[@content-desc='eBay Home']")
     private WebElement logoHomeButton;
 
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[@value=1]/XCUIElementTypeStaticText")
-    @AndroidFindBy(xpath = "(//android.view.View[@resource-id='RightSummaryPanel']//android.view.View[@resource-id='mainContent']/android.view.View/android.widget.TextView[@text])[1]")
+    @AndroidFindBy(xpath = "//android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[1]/android.widget.TextView")
     private WebElement productName;
 
-    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeOther[@name=\"main\"])[2]/XCUIElementTypeOther[15]/XCUIElementTypeOther[1]/XCUIElementTypeStaticText")
+    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeOther[@name='main'])[2]/XCUIElementTypeOther[15]/XCUIElementTypeOther[1]/XCUIElementTypeStaticText")
     @AndroidFindBy(xpath = "//android.view.View[@resource-id='mainContent']/android.widget.TextView[@text][1]")
     private WebElement productPrice;
 
-    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Buy It Now\"]")
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name='Buy It Now']")
     @AndroidFindBy(xpath = "//android.view.View[@content-desc='Buy It Now']")
     private WebElement buyItNowButton;
 
-    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeOther[@name=\"main\"])[2]/XCUIElementTypeStaticText[@name][2]")
+    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeOther[@name='main'])[2]/XCUIElementTypeStaticText[@name][2]")
     @AndroidFindBy(xpath = "//android.view.View[@resource-id='mainContent']/android.widget.TextView[@text][3]")
     private WebElement conditionText;
 
-    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"View in cart\"]")
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name='View in cart']")
     @AndroidFindBy(xpath = "//android.view.View[@content-desc='Add to cart']")
     private WebElement viewCartButton;
 
