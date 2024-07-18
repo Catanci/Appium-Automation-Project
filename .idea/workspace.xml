@@ -4,20 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="003b7aff-1607-493f-bcef-f373116bf11a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="003b7aff-1607-493f-bcef-f373116bf11a" name="Changes" comment="fixing webview context">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/constants/TestType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/constants/TestType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/android/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/android/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/util/driver/AndroidDrivers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/util/driver/AndroidDrivers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/util/driver/IOSDrivers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/util/driver/IOSDrivers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mobiletest/ApkBaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobiletest/ApkBaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mobiletest/WebBaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobiletest/WebBaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/device.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/device.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,24 +32,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "TestNG.ApkHomePageTest.verifySortingByPrice.executor": "Run",
-    "TestNG.ApkHomePageTest.verifyUserCanAddProductToCart.executor": "Run",
-    "TestNG.ApkHomePageTest.verifyUserCanPlaceAnOrder.executor": "Run",
-    "TestNG.WebHomePageTest.executor": "Run",
-    "TestNG.WebHomePageTest.testCarousel.executor": "Run",
-    "TestNG.WebHomePageTest.testProductSearch.executor": "Run",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/budaa/Desktop/Solvd_Carina_Project-master"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;TestNG.ApkHomePageTest.verifySortingByPrice.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ApkHomePageTest.verifyUserCanAddProductToCart.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ApkHomePageTest.verifyUserCanPlaceAnOrder.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.WebHomePageTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.WebHomePageTest.testCarousel.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.WebHomePageTest.testProductSearch.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/budaa/Desktop/project_java/Appium-Automation-Project&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\budaa\Desktop\project_java\Appium-Automation-Project\src\test\resources" />
@@ -183,6 +171,15 @@
       <option name="presentableId" value="Default" />
       <updated>1721052585725</updated>
     </task>
+    <task id="LOCAL-00001" summary="fixing webview context">
+      <option name="closed" value="true" />
+      <created>1721222412214</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1721222412214</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -195,6 +192,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fixing webview context" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing webview context" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
