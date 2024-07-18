@@ -63,11 +63,13 @@ ____
     * **Branches to build**: */master
     * **Build Steps**: Add separate build steps for Android and iOS:
       ```
+      Invoke top-level maven targets
+      
       # For Android
-      mvn test -Dplatform=android
+      test -Dplatform=android
  
       # For iOS
-      mvn test -Dplatform=ios
+      test -Dplatform=ios
       ```
 
 4. **Node Selection**: Ensure the Jenkins job runs on a node with necessary mobile testing capabilities.
