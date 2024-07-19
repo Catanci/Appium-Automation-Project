@@ -3,8 +3,8 @@
     <parameter name="platform" value="${platform}"/>
     <test name="Mobile Tests">
         <classes>
-            <class name="mobiletest.WebHomePageTest"/>
             <class name="mobiletest.AppHomePageTest"/>
+            <class name="mobiletest.WebHomePageTest"/>
         </classes>
     </test>
 </suite>
