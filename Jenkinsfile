@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     parameters {
-        choice(name: 'PLATFORM', choices: ['android', 'ios'], description:'Choose the platform to test on')
+        choice(name: 'PLATFORM', choices: ['android', 'iOS'], description:'Choose the platform to test on')
         string(name: 'EMULATOR_NAME', defaultValue: 'nexus5', description: 'Name of the Android emulator to use')
     }
 
@@ -43,7 +43,7 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                bat 'mvn test -Dplatform=${PLATFORM}'
+                bat mvn test -Dplatform=${PLATFORM}
             }
         }
     }

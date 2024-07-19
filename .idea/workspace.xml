@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="003b7aff-1607-493f-bcef-f373116bf11a" name="Changes" comment="jenkinsfile/readme">
-      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
-    </list>
+    <list default="true" id="003b7aff-1607-493f-bcef-f373116bf11a" name="Changes" comment="jenkinsfile choice" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -284,7 +282,39 @@
       <option name="project" value="LOCAL" />
       <updated>1721382522431</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="jenkinsfile/readme">
+      <option name="closed" value="true" />
+      <created>1721382653074</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1721382653074</updated>
+    </task>
+    <task id="LOCAL-00015" summary="jenkinsfile/readme">
+      <option name="closed" value="true" />
+      <created>1721382727046</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1721382727047</updated>
+    </task>
+    <task id="LOCAL-00016" summary="jenkinsfile/readme">
+      <option name="closed" value="true" />
+      <created>1721382793208</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1721382793208</updated>
+    </task>
+    <task id="LOCAL-00017" summary="jenkinsfile choice">
+      <option name="closed" value="true" />
+      <created>1721382899483</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1721382899483</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -306,6 +336,7 @@
     <MESSAGE value="jenkinsfile contains build steps" />
     <MESSAGE value="jenkinsfile update" />
     <MESSAGE value="jenkinsfile/readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="jenkinsfile/readme" />
+    <MESSAGE value="jenkinsfile choice" />
+    <option name="LAST_COMMIT_MESSAGE" value="jenkinsfile choice" />
   </component>
 </project>
