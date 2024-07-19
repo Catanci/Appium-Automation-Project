@@ -3,7 +3,7 @@ pipeline {
 
     parameters {
         string(name: 'EMULATOR_NAME', defaultValue: 'nexus5', description: 'Name of the Android emulator to use')
-        string(name: 'PLATFORM', choices: ['android', 'ios'], description:'Choose the platform to test on')
+        string(name: 'PLATFORM', choice: ['android', 'ios'], description:'Choose the platform to test on')
     }
 
     stages {
