@@ -43,7 +43,8 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                bat mvn test -Dplatform=${PLATFORM}
+                set PLATFORM=%PLATFORM%
+                mvn clean test -Dplatform=%PLATFORM%
             }
         }
     }
