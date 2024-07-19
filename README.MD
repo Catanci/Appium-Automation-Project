@@ -7,7 +7,8 @@ This project showcases a comprehensive automation framework for mobile testing, 
 * **Web and Native App Testing**: Capable of testing both mobile web browsers and native applications.
 * **Appium Integration**: Utilizes Appium for robust mobile automation.
 * **Page Object Model**: Implements POM design pattern for better maintainability.
-* **CI/CD Integration**: Designed for seamless integration into CI/CD pipelines for automated testing workflows.
+* **CI/CD Integration**: Integrated with Jenkins for automated testing workflows.
+
 ____
 ### Setup Checklist
 To ensure smooth execution of this project, please complete the following steps:
@@ -32,7 +33,7 @@ To ensure smooth execution of this project, please complete the following steps:
 * **Real Devices**: For testing on actual Android and iOS devices.
 * **Simulators/Emulators**: Set up Android emulators and iOS simulators.
 * **Jenkins**: For CI/CD integration.
-* **IDE**: Choose your preferred Java IDE (e.g., IntelliJ IDEA, Eclipse).
+* **IDE**: Choose your preferred Java IDE (e.g., IntelliJ IDEA).
 
 #### 4. Project Setup Notes
 * **Dependencies**: Managed in the project's pom.xml file. Ensure all necessary dependencies (Appium, TestNG, etc.) are included.
@@ -47,66 +48,51 @@ ____
         * For Android: `mvn test -Dplatform=android`
         * For iOS: `mvn test -Dplatform=ios`
     * **Run All Tests**: Execute `mvn test` to run all tests for both platforms.
-
 ____
 ### Jenkins Integration
-#### Pre-requisites
-* **Jenkins**: Ensure Jenkins is installed and running.
-* **Plugins**: Install necessary plugins (e.g., Git plugin, Maven plugin).
-* **Tools Configuration**: Configure JDK, Maven, and Node.js within Jenkins.
+The project is integrated with Jenkins using a pipeline approach, allowing for parameterized builds without the need to edit the Jenkinsfile.
 
-#### Create a New Freestyle Job:
-1. **New Job**: Navigate to Jenkins dashboard and click "New Item".
-2. **Name and Type**: Provide a name for your job and select "Freestyle" as the job type.
-3. **Configure Build Steps(an example for Android)**:
-   - Scroll to the "Build" section
-   - Add the following build steps in order:
+#### Jenkins Pipeline Setup
+1. **Pipeline Job**: A pipeline job is configured in Jenkins, linked to the repository containing the Jenkinsfile.
+2. **Parameterized Build**: The pipeline is set up with parameters that can be chosen at build time.
 
-   a. **Start Appium Server**:
-   - Click "Add build step" and select "Execute shell"
-   - Enter the following command:
-     ```
-     appium &
-     sleep 10  # Give Appium time to start
-     ```
+#### Key Features of the Jenkins Integration:
+- **Parameterized Builds**: Users can specify the platform and emulator name when starting a build.
+- **Appium Server Management**: Automatically starts and stops the Appium server.
+- **Emulator/Simulator Control**: Starts the specified Android emulator or iOS simulator and waits for it to boot completely.
+- **Cross-Platform Testing**: Supports both Android and iOS testing.
+- **Test Execution**: Runs Maven tests based on the specified parameters.
+- **Cleanup**: Ensures all processes are terminated after the build.
 
-   b. **Start Emulator** (for Android):
-   - Click "Add build step" and select "Execute shell"
-   - Enter the following command:
-     ```
-     cd %ANDROID_HOME%\emulator || echo "Failed to change directory"
-     start /b emulator -avd phoneName || echo "Failed to start emulator"
-     timeout 60
-     adb shell getprop sys.boot_completed || echo "Failed to check boot completion"
-     adb wait-for-device || echo "ADB wait-for-device failed"
-     ```
-   Replace "YourEmulatorName" with your actual emulator name
+#### Available Build Parameters
+- **PLATFORM**: Choose between 'android' or 'ios'.
+- **EMULATOR_NAME**: Name of the Android emulator or iOS simulator to use.
 
-   c. **Run Tests**:
-   - Click "Add build step" and select "Invoke top-level Maven targets"
-   - Add the following Maven goals:
+#### Running the Jenkins Job
+1. Navigate to the pipeline job in Jenkins.
+2. Click "Build with Parameters".
+3. You will see a form where you can specify:
+    - **PLATFORM**: Choose 'android' or 'ios'.
+    - **EMULATOR_NAME**: Enter the name of the emulator/simulator you want to use.
+4. Click "Build" to start the pipeline with your chosen parameters.
 
-     For Android:
-     ```
-     test -Dplatform=android
-     ```
+#### Pipeline Stages
+The pipeline executes the following stages:
+1. Start Appium Server
+2. Start Emulator/Simulator (based on selected platform and device name)
+3. Run Tests
+4. Cleanup
 
-     For iOS:
-     ```
-     test -Dplatform=ios
-     ```
+#### Test Execution
+- Tests are executed using Maven with the command: `mvn test -Dplatform=${PLATFORM}`
+- This allows for dynamic selection of the testing platform (Android/iOS) at runtime.
 
-   d. **Stop Emulator and Appium** (Post-build step):
-   - Click "Add build step" and select "Execute Windows batch command"
-   - Enter the following commands:
-     ```
-     taskkill /F /IM node.exe
-     taskkill /F /IM emulator.exe
-     taskkill /F /IM qemu-system-x86_64.exe
-     ```
+#### Troubleshooting
+- Ensure the emulator/simulator name you specify exists in the Jenkins environment.
+- For iOS testing, make sure the Jenkins agent is set up with the necessary iOS development tools.
+- If the build fails, check the console output for specific error messages.
+- Check if the job runs on the correct node (Windows pref).
 
-4. **Node Selection**: Ensure the Jenkins job runs on a correct node.
-
-#### Run Your Freestyle Job
+#### Run Your Pipeline Job
 
 Good luck! 
