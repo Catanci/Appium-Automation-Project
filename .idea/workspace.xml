@@ -314,7 +314,31 @@
       <option name="project" value="LOCAL" />
       <updated>1721382899483</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="jenkinsfile choice">
+      <option name="closed" value="true" />
+      <created>1721383081746</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1721383081746</updated>
+    </task>
+    <task id="LOCAL-00019" summary="jenkinsfile choice">
+      <option name="closed" value="true" />
+      <created>1721383134118</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1721383134118</updated>
+    </task>
+    <task id="LOCAL-00020" summary="jenkinsfile choice">
+      <option name="closed" value="true" />
+      <created>1721383205952</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1721383205952</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -72,7 +72,7 @@ The project is integrated with Jenkins using a pipeline approach, allowing for p
 1. Navigate to the pipeline job in Jenkins.
 2. Click "Build with Parameters".
 3. You will see a form where you can specify:
-    - **PLATFORM**: Choose 'android' or 'ios'.
+    - **PLATFORM**: Choose 'android' or 'iOS'.
     - **EMULATOR_NAME**: Enter the name of the emulator/simulator you want to use.
 4. Click "Build" to start the pipeline with your chosen parameters.
 
@@ -83,16 +83,10 @@ The pipeline executes the following stages:
 3. Run Tests
 4. Cleanup
 
-#### Test Execution
-- Tests are executed using Maven with the command: `mvn test -Dplatform=${PLATFORM}`
-- This allows for dynamic selection of the testing platform (Android/iOS) at runtime.
-
 #### Troubleshooting
 - Ensure the emulator/simulator name you specify exists in the Jenkins environment.
 - For iOS testing, make sure the Jenkins agent is set up with the necessary iOS development tools.
 - If the build fails, check the console output for specific error messages.
 - Check if the job runs on the correct node (Windows pref).
-
-#### Run Your Pipeline Job
 
 Good luck! 
