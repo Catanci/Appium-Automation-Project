@@ -4,7 +4,7 @@
     <test name="Mobile Tests">
         <classes>
             <class name="mobiletest.WebHomePageTest"/>
-            <!-- Add other test classes as needed -->
+            <class name="mobiletest.AppHomePageTest"/>
         </classes>
     </test>
 </suite>
