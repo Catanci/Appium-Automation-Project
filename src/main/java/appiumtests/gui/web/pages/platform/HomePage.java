@@ -46,7 +46,7 @@ public class HomePage extends HomePageBase {
     @AndroidFindBy(xpath = "//h2[@class='vl-card-header__headline']")
     private WebElement recentlyViewedItemsBanner;
 
-    @iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[@name='main']/XCUIElementTypeOther[4]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeLink/XCUIElementTypeLink[2]/XCUIElementTypeStaticText")
+    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeLink[@value='3'])[1]/XCUIElementTypeStaticText")
     @AndroidFindBy(xpath = "//android.widget.ListView[@resource-id='s0-1-0-50-1-2-4-17[0[0]]-0[0]-7-@match-media-0-@ebay-carousel-list']//android.widget.TextView[@text][1]")
     private List<WebElement> carouselItemName;
 

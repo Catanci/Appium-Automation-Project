@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="003b7aff-1607-493f-bcef-f373116bf11a" name="Changes" comment="jenkinsfile choice" />
+    <list default="true" id="003b7aff-1607-493f-bcef-f373116bf11a" name="Changes" comment="webview context for ebay broken, switching to native">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/components/Header.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/components/Header.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/platform/FiltersPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/platform/FiltersPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/platform/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/platform/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/platform/ProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/platform/ProductPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/platform/SearchResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appiumtests/gui/web/pages/platform/SearchResultPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mobiletest/WebBaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobiletest/WebBaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mobiletest/WebHomePageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobiletest/WebHomePageTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,9 +26,6 @@
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
-  </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
@@ -33,36 +41,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;TestNG.ApkHomePageTest.verifySortingByPrice.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.ApkHomePageTest.verifyUserCanAddProductToCart.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.ApkHomePageTest.verifyUserCanPlaceAnOrder.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.AppHomePageTest.verifyUserCanAddProductToCart.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.WebHomePageTest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.WebHomePageTest.testApplyingFiltersToSearchResult.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.WebHomePageTest.testCarousel.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.WebHomePageTest.testProductSearch.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/budaa/Desktop/project_java/Appium-Automation-Project&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TestNG.ApkHomePageTest.verifySortingByPrice.executor": "Run",
+    "TestNG.ApkHomePageTest.verifyUserCanAddProductToCart.executor": "Run",
+    "TestNG.ApkHomePageTest.verifyUserCanPlaceAnOrder.executor": "Run",
+    "TestNG.AppHomePageTest.verifySortingByPrice.executor": "Run",
+    "TestNG.AppHomePageTest.verifyUserCanAddProductToCart.executor": "Run",
+    "TestNG.AppHomePageTest.verifyUserCanPlaceAnOrder.executor": "Run",
+    "TestNG.WebHomePageTest.executor": "Run",
+    "TestNG.WebHomePageTest.testAddingItemsToCart.executor": "Run",
+    "TestNG.WebHomePageTest.testApplyingFiltersToSearchResult.executor": "Run",
+    "TestNG.WebHomePageTest.testCarousel.executor": "Run",
+    "TestNG.WebHomePageTest.testProductSearch.executor": "Run",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/budaa/Desktop/project_java/Appium-Automation-Project"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\budaa\Desktop\project_java\Appium-Automation-Project" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\budaa\Desktop\project_java\Appium-Automation-Project\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.WebHomePageTest.testApplyingFiltersToSearchResult">
-    <configuration name="AppHomePageTest.verifyUserCanAddProductToCart" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.WebHomePageTest.testAddingItemsToCart">
+    <configuration name="AppHomePageTest.verifySortingByPrice" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="mobile-appium-java" />
       <extension name="coverage">
         <pattern>
@@ -72,7 +80,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="mobiletest" />
       <option name="MAIN_CLASS_NAME" value="mobiletest.AppHomePageTest" />
-      <option name="METHOD_NAME" value="verifyUserCanAddProductToCart" />
+      <option name="METHOD_NAME" value="verifySortingByPrice" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -80,7 +88,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WebHomePageTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="WebHomePageTest.testAddingItemsToCart" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="mobile-appium-java" />
       <extension name="coverage">
         <pattern>
@@ -90,7 +98,8 @@
       </extension>
       <option name="PACKAGE_NAME" value="mobiletest" />
       <option name="MAIN_CLASS_NAME" value="mobiletest.WebHomePageTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="METHOD_NAME" value="testAddingItemsToCart" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -153,18 +162,17 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.WebHomePageTest.testAddingItemsToCart" />
         <item itemvalue="TestNG.WebHomePageTest.testApplyingFiltersToSearchResult" />
         <item itemvalue="TestNG.WebHomePageTest.testCarousel" />
         <item itemvalue="TestNG.WebHomePageTest.testProductSearch" />
-        <item itemvalue="TestNG.AppHomePageTest.verifyUserCanAddProductToCart" />
-        <item itemvalue="TestNG.WebHomePageTest" />
+        <item itemvalue="TestNG.AppHomePageTest.verifySortingByPrice" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
         <option value="jdk-22-openjdk-22-3183f394aec4-bad0321e" />
       </set>
     </attachedChunks>
@@ -186,159 +194,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721222412214</updated>
     </task>
-    <task id="LOCAL-00002" summary="fixing webview context">
+    <task id="LOCAL-00002" summary="webview context for ebay broken, switching to native">
       <option name="closed" value="true" />
-      <created>1721285681882</created>
+      <created>1721301053392</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1721285681882</updated>
+      <updated>1721301053392</updated>
     </task>
-    <task id="LOCAL-00003" summary="fixing webview context">
-      <option name="closed" value="true" />
-      <created>1721285707727</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1721285707727</updated>
-    </task>
-    <task id="LOCAL-00004" summary="ci/cd integration">
-      <option name="closed" value="true" />
-      <created>1721306210172</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1721306210172</updated>
-    </task>
-    <task id="LOCAL-00005" summary="ci/cd integration">
-      <option name="closed" value="true" />
-      <created>1721306732050</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1721306732050</updated>
-    </task>
-    <task id="LOCAL-00006" summary="ci/cd integration, readme">
-      <option name="closed" value="true" />
-      <created>1721323062931</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1721323062931</updated>
-    </task>
-    <task id="LOCAL-00007" summary="pom.xml">
-      <option name="closed" value="true" />
-      <created>1721378611618</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1721378611620</updated>
-    </task>
-    <task id="LOCAL-00008" summary="jenkinsfile contains build steps">
-      <option name="closed" value="true" />
-      <created>1721379438049</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1721379438049</updated>
-    </task>
-    <task id="LOCAL-00009" summary="jenkinsfile contains build steps">
-      <option name="closed" value="true" />
-      <created>1721379641230</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1721379641230</updated>
-    </task>
-    <task id="LOCAL-00010" summary="jenkinsfile update">
-      <option name="closed" value="true" />
-      <created>1721380056482</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1721380056482</updated>
-    </task>
-    <task id="LOCAL-00011" summary="jenkinsfile update">
-      <option name="closed" value="true" />
-      <created>1721380216967</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1721380216967</updated>
-    </task>
-    <task id="LOCAL-00012" summary="jenkinsfile/readme">
-      <option name="closed" value="true" />
-      <created>1721381384039</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1721381384039</updated>
-    </task>
-    <task id="LOCAL-00013" summary="jenkinsfile/readme">
-      <option name="closed" value="true" />
-      <created>1721382522431</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1721382522431</updated>
-    </task>
-    <task id="LOCAL-00014" summary="jenkinsfile/readme">
-      <option name="closed" value="true" />
-      <created>1721382653074</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1721382653074</updated>
-    </task>
-    <task id="LOCAL-00015" summary="jenkinsfile/readme">
-      <option name="closed" value="true" />
-      <created>1721382727046</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1721382727047</updated>
-    </task>
-    <task id="LOCAL-00016" summary="jenkinsfile/readme">
-      <option name="closed" value="true" />
-      <created>1721382793208</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1721382793208</updated>
-    </task>
-    <task id="LOCAL-00017" summary="jenkinsfile choice">
-      <option name="closed" value="true" />
-      <created>1721382899483</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1721382899483</updated>
-    </task>
-    <task id="LOCAL-00018" summary="jenkinsfile choice">
-      <option name="closed" value="true" />
-      <created>1721383081746</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1721383081746</updated>
-    </task>
-    <task id="LOCAL-00019" summary="jenkinsfile choice">
-      <option name="closed" value="true" />
-      <created>1721383134118</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1721383134118</updated>
-    </task>
-    <task id="LOCAL-00020" summary="jenkinsfile choice">
-      <option name="closed" value="true" />
-      <created>1721383205952</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1721383205952</updated>
-    </task>
-    <option name="localTasksCounter" value="21" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -354,13 +218,22 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fixing webview context" />
-    <MESSAGE value="ci/cd integration" />
-    <MESSAGE value="ci/cd integration, readme" />
-    <MESSAGE value="pom.xml" />
-    <MESSAGE value="jenkinsfile contains build steps" />
-    <MESSAGE value="jenkinsfile update" />
-    <MESSAGE value="jenkinsfile/readme" />
-    <MESSAGE value="jenkinsfile choice" />
-    <option name="LAST_COMMIT_MESSAGE" value="jenkinsfile choice" />
+    <MESSAGE value="webview context for ebay broken, switching to native" />
+    <option name="LAST_COMMIT_MESSAGE" value="webview context for ebay broken, switching to native" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/mobiletest/ApkHomePageTest.java</url>
+          <line>55</line>
+          <properties class="mobiletest.ApkHomePageTest">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

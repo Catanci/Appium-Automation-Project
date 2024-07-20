@@ -18,7 +18,7 @@ import java.time.Duration;
 @Getter
 public class ProductPage extends ProductPageBase {
 
-    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeOther[@name='main'])[2]/XCUIElementTypeButton[3]")
+    @iOSXCUITFindBy(accessibility = "BackButton")
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='Back to search results']")
     private WebElement backToResultsText;
 
@@ -26,11 +26,11 @@ public class ProductPage extends ProductPageBase {
     @AndroidFindBy(xpath = "//android.view.View[@content-desc='eBay Home']")
     private WebElement logoHomeButton;
 
-    @iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[@value=1]/XCUIElementTypeStaticText")
+    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeOther[@value='1'])[1]/XCUIElementTypeStaticText")
     @AndroidFindBy(xpath = "//android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[1]/android.widget.TextView")
     private WebElement productName;
 
-    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeOther[@name='main'])[2]/XCUIElementTypeOther[15]/XCUIElementTypeOther[1]/XCUIElementTypeStaticText")
+    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeOther[@name=\"main\"])[2]/XCUIElementTypeOther[15]/XCUIElementTypeStaticText")
     @AndroidFindBy(xpath = "//android.view.View[@resource-id='mainContent']/android.widget.TextView[@text][1]")
     private WebElement productPrice;
 
@@ -38,13 +38,13 @@ public class ProductPage extends ProductPageBase {
     @AndroidFindBy(xpath = "//android.view.View[@content-desc='Buy It Now']")
     private WebElement buyItNowButton;
 
-    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeOther[@name='main'])[2]/XCUIElementTypeStaticText[@name][2]")
+    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeOther[@name='main'])[2]/XCUIElementTypeStaticText[@value][5]")
     @AndroidFindBy(xpath = "//android.view.View[@resource-id='mainContent']/android.widget.TextView[@text][3]")
     private WebElement conditionText;
 
-    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name='View in cart']")
+    @iOSXCUITFindBy(accessibility = "Add to cart")
     @AndroidFindBy(xpath = "//android.view.View[@content-desc='Add to cart']")
-    private WebElement viewCartButton;
+    private WebElement addToCart;
 
     //Cart Overlay
     @AndroidFindBy(xpath = "//android.app.Dialog[@text='1 item added to cart']/android.view.View/android.view.View[2]/android.widget.TextView[@text][2]")
@@ -138,7 +138,7 @@ public class ProductPage extends ProductPageBase {
     }
 
     public void tapAddToCart() {
-        viewCartButton.click();
+        addToCart.click();
     }
 
     public void tapCloseButton() {

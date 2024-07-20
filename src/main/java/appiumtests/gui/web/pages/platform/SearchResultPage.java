@@ -22,11 +22,11 @@ import java.util.stream.Collectors;
 @Getter
 public class SearchResultPage extends SearchResultPageBase {
 
-    @iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[@name='content-desc']/XCUIElementTypeOther[4]/XCUIElementTypeOther")
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeLink[@value=3]/XCUIElementTypeStaticText[@name]")
     @AndroidFindBy(xpath = "//android.view.View[@content-desc]/android.view.View[1]")
     private List<WebElement> searchResultsList;
 
-    @iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[@name='mainContent']/XCUIElementTypeOther[4]/XCUIElementTypeOther/XCUIElementTypeStaticText")
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name='Show 5,500,000+ results']")
     @AndroidFindBy(xpath = "//android.view.View[@resource-id='mainContent']/android.view.View[1]/android.view.View/android.widget.TextView[@text]")
     private WebElement searchResultCount;
 
@@ -34,7 +34,7 @@ public class SearchResultPage extends SearchResultPageBase {
     @AndroidFindBy(xpath = "//android.widget.Button[@text='Sort']")
     private WebElement sortButton;
 
-    @iOSXCUITFindBy(accessibility = "Filter" )
+    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeButton[@name='Filter'])[1]" )
     @AndroidFindBy(xpath = "//android.widget.Button[@text='Filter']")
     private WebElement filter;
 
@@ -50,7 +50,7 @@ public class SearchResultPage extends SearchResultPageBase {
     public List<String> getVisibleResults() {
         logger.info("Number of elements found: " + searchResultsList.size());
         return searchResultsList.stream()
-                .peek(element -> logger.info("Found elements... {}", element.getSize()))
+//                .peek(element -> logger.info("Found elements... {}", element.getSize()))
                 .map(WebElement::getText)
                 .collect(Collectors.toList());
     }

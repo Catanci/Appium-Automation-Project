@@ -56,26 +56,26 @@ public class WebBaseTest {
         switch (direction) {
             case UP:
                 startX = size.width / 2;
-                startY = (int) (size.height * 0.8);
-                endY = (int) (size.height * 0.2);
+                startY = (int) (size.height * 0.6);
+                endY = (int) (size.height * 0.4);
                 endX = startX;
                 break;
             case DOWN:
                 startX = size.width / 2;
-                startY = (int) (size.height * 0.2);
-                endY = (int) (size.height * 0.8);
+                startY = (int) (size.height * 0.4);
+                endY = (int) (size.height * 0.6);
                 endX = startX;
                 break;
             case LEFT:
                 startY = size.height / 2;
-                startX = (int) (size.width * 0.8);
-                endX = (int) (size.width * 0.2);
+                startX = (int) (size.width * 0.6);
+                endX = (int) (size.width * 0.4);
                 endY = startY;
                 break;
             case RIGHT:
                 startY = size.height / 2;
-                startX = (int) (size.width * 0.2);
-                endX = (int) (size.width * 0.8);
+                startX = (int) (size.width * 0.4);
+                endX = (int) (size.width * 0.6);
                 endY = startY;
                 break;
             default:

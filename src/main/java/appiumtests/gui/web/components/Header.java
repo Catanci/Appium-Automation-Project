@@ -4,6 +4,7 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import lombok.Getter;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -28,6 +29,7 @@ public class Header extends HeaderBase {
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='Gift Cards']")
     private WebElement giftCards;
 
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name='Shopping cart']")
     @AndroidFindBy(xpath = "//android.view.View[@resource-id='gh-minicart-hover']")
     private WebElement cartIcon;
 
