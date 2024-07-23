@@ -39,13 +39,13 @@ public class AndroidDrivers implements MobileDriverService {
             options.setCapability("browserName", ANDROID_BROWSER_NAME);
         } else if (testType == TestType.APP) {
             logger.info("Setting up APP test...");
-            Path appPath = Paths.get(ANDROID_APP_APK_PATH).toAbsolutePath();
+            Path appPath = Paths.get(ANDROID_APK_PATH).toAbsolutePath();
             options.setApp(String.valueOf(appPath));
             options.setNoReset(false);
-            options.setAppPackage(ANDROID_APP_APK_PACKAGE);
-            options.setAppActivity(ANDROID_APP_APK_ACTIVITY);
-            logger.debug("App Package: " + ANDROID_APP_APK_PACKAGE);
-            logger.debug("App Activity: " + ANDROID_APP_APK_ACTIVITY);
+            options.setAppPackage(ANDROID_APK_PACKAGE);
+            options.setAppActivity(ANDROID_APK_ACTIVITY);
+            logger.debug("App Package: " + ANDROID_APK_PACKAGE);
+            logger.debug("App Activity: " + ANDROID_APK_ACTIVITY);
         }
         try {
             logger.debug("Attempting to create AndroidDriver...");

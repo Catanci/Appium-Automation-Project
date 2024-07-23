@@ -7,7 +7,6 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import lombok.Getter;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 @Getter
@@ -36,21 +35,6 @@ public class Header extends HeaderBase {
     public Header(AppiumDriver driver) {
         super(driver);
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
-
-    @Override
-    public void tapSignIn() {
-
-    }
-
-    @Override
-    public void tapGiftCards() {
-
-    }
-
-    @Override
-    public void tapMyEbay() {
-
     }
 
     @Override

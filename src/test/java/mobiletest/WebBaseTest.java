@@ -8,7 +8,6 @@ import org.apache.logging.log4j.Logger;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import appiumtests.constants.Direction;
-import appiumtests.util.driver.AndroidDrivers;
 import appiumtests.util.driver.MobileDriverService;
 
 import org.openqa.selenium.interactions.PointerInput;

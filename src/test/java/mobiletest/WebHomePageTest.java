@@ -58,9 +58,7 @@ public class WebHomePageTest extends WebBaseTest {
         Assert.assertTrue(productPage.isPageOpened(),
                 "After opening the product page, user has been redirected to a different page");
         pause(2);
-//        swipeScreen(Direction.UP);
         String firstProduct = productPage.getProductName();
-//        swipeScreen(Direction.DOWN);
         productPage.tapBackButton();
         softAssert.assertFalse(searchResultPage.getVisibleResults().isEmpty(),
                 "Search results should not be empty");
@@ -70,9 +68,7 @@ public class WebHomePageTest extends WebBaseTest {
                 "After opening the product page, user has been redirected to the different page");
         pause(2);
 
-//        swipeScreen(Direction.UP);
         String secondProduct = productPage.getProductName();
-//        swipeScreen(Direction.DOWN);
         productPage.tapBackButton();
         softAssert.assertFalse(searchResultPage.getVisibleResults().isEmpty(),
                 "Search results should not be empty");
@@ -83,10 +79,8 @@ public class WebHomePageTest extends WebBaseTest {
                 "After opening the result page, user has been redirected to the different page");
         pause(2);
 
-//        swipeScreen(Direction.UP);
         String thirdProduct = productPage.getProductName();
         swipeScreen(Direction.DOWN);
-//        productPage.tapHomeButton();
         productPage.tapBackButton();
         productPage.tapBackButton();
         softAssert.assertTrue(homePage.isBannerVisible(),
@@ -147,7 +141,6 @@ public class WebHomePageTest extends WebBaseTest {
         String refurbished = "Refurbished";
         Assert.assertTrue(condition.contains(refurbished),
                 "Condition of the product is not correct for the filter:" + condition + ", and should be :" + refurbished);
-//        swipeScreen(Direction.UP);
         Assert.assertTrue(productPage.isBuyItNowButtonVisible(),
                 "'Buy it now' option is not found for the product");
 

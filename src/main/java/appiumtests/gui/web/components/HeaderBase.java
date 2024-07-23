@@ -13,11 +13,7 @@ public abstract class HeaderBase {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    public abstract void tapSignIn();
-
-    public abstract void tapGiftCards();
-
-    public abstract void tapMyEbay();
+    public abstract void openMenu();
 
     public abstract void tapCart();
 }
