@@ -38,7 +38,7 @@ public class ProductPage extends ProductPageBase {
     @AndroidFindBy(xpath = "//android.view.View[@content-desc='Buy It Now']")
     private WebElement buyItNowButton;
 
-    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeOther[@name='main'])[2]/XCUIElementTypeStaticText[@value][5]")
+    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeStaticText[@name])[21]")
     @AndroidFindBy(xpath = "//android.view.View[@resource-id='mainContent']/android.widget.TextView[@text][3]")
     private WebElement conditionText;
 

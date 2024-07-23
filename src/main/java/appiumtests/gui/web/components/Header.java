@@ -29,7 +29,7 @@ public class Header extends HeaderBase {
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='Gift Cards']")
     private WebElement giftCards;
 
-    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name='Shopping cart']")
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[@name=\"banner\"]/XCUIElementTypeOther[2]/XCUIElementTypeLink[2]")
     @AndroidFindBy(xpath = "//android.view.View[@resource-id='gh-minicart-hover']")
     private WebElement cartIcon;
 

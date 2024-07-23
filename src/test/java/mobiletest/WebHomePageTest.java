@@ -146,7 +146,7 @@ public class WebHomePageTest extends WebBaseTest {
         String condition = productPage.getProductCondition();
         String refurbished = "Refurbished";
         Assert.assertTrue(condition.contains(refurbished),
-                "Condition of the product is not correct for the filter:" + condition + ", and should be" + refurbished);
+                "Condition of the product is not correct for the filter:" + condition + ", and should be :" + refurbished);
 //        swipeScreen(Direction.UP);
         Assert.assertTrue(productPage.isBuyItNowButtonVisible(),
                 "'Buy it now' option is not found for the product");
@@ -187,16 +187,17 @@ public class WebHomePageTest extends WebBaseTest {
         swipeScreen(Direction.UP);
         productPage.tapAddToCart();
         pause(2);
-//        String productNameOverlay = productPage.getCartOverlayProductName();
-//        String productPriceOverlay = productPage.getCartOverlayProductPrice();
-//        softAssert.assertEquals(productName,productNameOverlay,
-//                "Product with different name was added to the cart");
-//        softAssert.assertEquals(productPrice,productPriceOverlay,
-//                "Product with different price was added to the cart");
-//        productPage.tapCloseButton();
-//        pause(2);
 
-//        productPage.tapHomeButton();
+        String productNameOverlay = productPage.getCartOverlayProductName();
+        String productPriceOverlay = productPage.getCartOverlayProductPrice();
+        softAssert.assertEquals(productName,productNameOverlay,
+                "Product with different name was added to the cart");
+        softAssert.assertEquals(productPrice,productPriceOverlay,
+                "Product with different price was added to the cart");
+        productPage.tapCloseButton();
+        pause(2);
+
+        productPage.tapHomeButton();
         swipeScreen(Direction.DOWN);
         productPage.tapBackButton();
         productPage.tapBackButton();
